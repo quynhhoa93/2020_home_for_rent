@@ -81,6 +81,11 @@
     });
 </script>
 
+<script src="//cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+<script>
+CKEDITOR.replace('summary-ckeditor');
+</script>
+
 </body>
 @jquery
 @toastr_js

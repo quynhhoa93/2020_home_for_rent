@@ -25,6 +25,8 @@ Route::group(['namespace' => 'Client'], function () {
         Route::get('detail','BlogController@detail');
     });
 
+Route::get('/', function () {
+    return view('welcome');
 });
 
 // Admin
@@ -39,10 +41,14 @@ Route::group(['namespace' => 'Client'], function () {
 // Route::get('/dang-nhap','IndexController@getLogin')->name('getLogin');
 
 
-// Route::group(['prefix'=>'/admin','namespace'=>'Admin','as'=>'admin.','middleware'=>['auth','admin']],function (){
-//     Route::get('/dashboard','DashboardController@getDashboard')->name('dashboard');
+    Route::resource('/category','CategoryController');
+    Route::resource('/blogs','BlogController');
 
-//     Route::resource('/category','CategoryController');
+    //contact
+    Route::get('/contact','ContactController@index')->name('getContact');
+    Route::get('/single-contact/{id}','ContactController@singleContact')->name('singleContact');
+    Route::delete('/delete-contact/{id}','ContactController@deleteContact')->name('deleteContact');
+});
 
 //     //contact
 //     Route::get('/contact','ContactController@index');
