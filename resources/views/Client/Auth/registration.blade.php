@@ -28,19 +28,18 @@
                         <p class="text-center">Have an account? <a class="text-thm" href="page-login.html">Login</a></p>
                     </div>
                     <div class="details">
-                        <form action="" method="POST">
-                            @csrf
+                        <form action="#">
                             <div class="form-group">
-                                <input type="text"  name="name" class="form-control" id="exampleInputName2" placeholder="Username">
+                                <input type="text" class="form-control" id="exampleInputName2" placeholder="Username">
                             </div>
                              <div class="form-group">
-                                <input type="email" name="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">
+                                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">
                             </div>
                             <div class="form-group">
-                                <input type="password" name="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
+                                <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
                             </div>
                             <div class="form-group">
-                                <input type="password" name="confirm" class="form-control" id="exampleInputPassword5" placeholder="Confirm Password">
+                                <input type="password" class="form-control" id="exampleInputPassword5" placeholder="Confirm Password">
                             </div>
                             <div class="form-group custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="exampleCheck3">

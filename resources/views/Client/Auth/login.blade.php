@@ -1,4 +1,4 @@
-@extends('client.layouts.app',['title'=>'Login'])
+@extends('client.layouts.app')
 @section('content')
 <!-- Inner Page Breadcrumb -->
 	<section class="inner_page_breadcrumb">
@@ -26,7 +26,7 @@
 						<form action="#">
 							<div class="heading">
 								<h3 class="text-center">Login to your account</h3>
-								<p class="text-center">Don't have an account? <a class="text-thm" href="/registration">Sign Up!</a></p>
+								<p class="text-center">Don't have an account? <a class="text-thm" href="page-register.html">Sign Up!</a></p>
 							</div>
 							 <div class="form-group">
 						    	<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">
