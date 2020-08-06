@@ -12,5 +12,5 @@ class LoginController extends Controller
         return view('Client.auth.login');
     }
 
-    
+
 }

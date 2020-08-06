@@ -18,13 +18,18 @@ Route::group(['namespace' => 'Client'], function () {
 
     Route::get('login','LoginController@ShowLoginForm');
 
+    Route::group(['prefix' => 'registration'], function () {
+        Route::get('','RegistrationController@index');
+        Route::post('','RegistrationController@Signup');
+    });
+
     Route::get('listing',"ClientController@listing");
 
     Route::group(['prefix' => 'blog'], function () {
         Route::get('','BlogController@index');
         Route::get('/{detail}','BlogController@detail');
     });
-
+});
 // Admin
 // Route::get('/', function () {
 //     return view('admin.layouts.master');
@@ -37,14 +42,14 @@ Route::group(['namespace' => 'Client'], function () {
 // Route::get('/dang-nhap','IndexController@getLogin')->name('getLogin');
 
 
-    Route::resource('/category','CategoryController');
-    Route::resource('/blogs','BlogController');
+//     Route::resource('/category','CategoryController');
+//     Route::resource('/blogs','BlogController');
 
-    //contact
-    Route::get('/contact','ContactController@index')->name('getContact');
-    Route::get('/single-contact/{id}','ContactController@singleContact')->name('singleContact');
-    Route::delete('/delete-contact/{id}','ContactController@deleteContact')->name('deleteContact');
-});
+//     //contact
+//     Route::get('/contact','ContactController@index')->name('getContact');
+//     Route::get('/single-contact/{id}','ContactController@singleContact')->name('singleContact');
+//     Route::delete('/delete-contact/{id}','ContactController@deleteContact')->name('deleteContact');
+// });
 
 //     //contact
 //     Route::get('/contact','ContactController@index');

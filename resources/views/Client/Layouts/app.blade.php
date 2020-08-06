@@ -13,7 +13,7 @@
 <!-- Responsive stylesheet -->
 <link rel="stylesheet" href="/assets/css/responsive.css">
 <!-- Title -->
-<title>FindHouse - Real Estate HTML Template</title>
+<title>{{ $title}}</title>
 <!-- Favicon -->
 <link href="/assets/images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
 <link href="/assets/images/favicon.ico" sizes="128x128" rel="shortcut icon" />
