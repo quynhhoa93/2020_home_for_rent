@@ -10,30 +10,47 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Client
+Route::group(['namespace' => 'Client'], function () {
+    Route::get('','ClientController@index');
 
-Route::get('/', function () {
-    return view('admin.layouts.master');
+    Route::get('contact','ClientController@contact');
+
+    Route::get('login','LoginController@ShowLoginForm');
+
+    Route::get('listing',"ClientController@listing");
+
+    Route::group(['prefix' => 'blog'], function () {
+        Route::get('','BlogController@index');
+        Route::get('detail','BlogController@detail');
+    });
+
 });
 
-Auth::routes();
+// Admin
+// Route::get('/', function () {
+//     return view('admin.layouts.master');
+// });
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Auth::routes();
 
-Route::get('/dang-nhap','IndexController@getLogin')->name('getLogin');
+// Route::get('/home', 'HomeController@index')->name('home');
 
-
-Route::group(['prefix'=>'/admin','namespace'=>'Admin','as'=>'admin.','middleware'=>['auth','admin']],function (){
-    Route::get('/dashboard','DashboardController@getDashboard')->name('dashboard');
-
-    Route::resource('/category','CategoryController');
-
-    //contact
-    Route::get('/contact','ContactController@index');
-    Route::get('/single-contact/{id}','ContactController@singleContact')->name('singleContact');
-    Route::delete('/delete-contact/{id}','ContactController@deleteContact')->name('deleteContact');
-});
+// Route::get('/dang-nhap','IndexController@getLogin')->name('getLogin');
 
 
-Route::group(['prefix'=>'/author','namespace'=>'Author','as'=>'author.','middleware'=>['auth','author']],function () {
-    Route::get('/dashboard','DashboardController@getDashboard')->name('dashboard');
-});
+// Route::group(['prefix'=>'/admin','namespace'=>'Admin','as'=>'admin.','middleware'=>['auth','admin']],function (){
+//     Route::get('/dashboard','DashboardController@getDashboard')->name('dashboard');
+
+//     Route::resource('/category','CategoryController');
+
+//     //contact
+//     Route::get('/contact','ContactController@index');
+//     Route::get('/single-contact/{id}','ContactController@singleContact')->name('singleContact');
+//     Route::delete('/delete-contact/{id}','ContactController@deleteContact')->name('deleteContact');
+// });
+
+
+// Route::group(['prefix'=>'/author','namespace'=>'Author','as'=>'author.','middleware'=>['auth','author']],function () {
+//     Route::get('/dashboard','DashboardController@getDashboard')->name('dashboard');
+// });
