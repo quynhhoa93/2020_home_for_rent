@@ -11,6 +11,7 @@
         <div id="content-header">
             <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">Tables</a> </div>
             <h1>Tables</h1>
+            <h1><a href="{{route('admin.blogs.create')}}" class="btn btn-success btn-large" >thêm bài viết mới</a> </h1>
         </div>
         <div class="container-fluid">
             <hr>
@@ -28,6 +29,8 @@
                                     <th>tên bài viết</th>
                                     <th>chi tiết bài viết</th>
                                     <th>trạng thái</th>
+                                    <th>phê duyệt</th>
+                                    <td>số lượt xem</td>
                                     <th>ảnh bài viết</th>
                                     <th>hành động</th>
                                 </tr>
@@ -45,6 +48,14 @@
                                                 hiện
                                             @endif
                                         </td>
+
+
+                                            @if($blog->is_approved == 0)
+                                            <td style="color: red"> đang chờ admin phê duyệt </td>
+                                            @else
+                                            <td style="color: green"> đã được phê duyệt </td>
+                                            @endif
+                                        <td>{{$blog->view_count}}</td>
                                         
                                         <td><img src="{{asset('backend/img/blog/small/'.$blog->image)}}" style="width: 100px"></td>
                                         <td class="center">

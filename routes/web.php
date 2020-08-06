@@ -32,9 +32,15 @@ Route::group(['prefix'=>'/admin','namespace'=>'Admin','as'=>'admin.','middleware
     Route::get('/contact','ContactController@index')->name('getContact');
     Route::get('/single-contact/{id}','ContactController@singleContact')->name('singleContact');
     Route::delete('/delete-contact/{id}','ContactController@deleteContact')->name('deleteContact');
+
+    //phe duyet bai viet tu author
+    Route::get('/pending/blogs','BlogController@pending')->name('blog.pending');
+    Route::put('/blog/{id}/approve','BlogController@approve')->name('blog.approve');
 });
 
 
 Route::group(['prefix'=>'/author','namespace'=>'Author','as'=>'author.','middleware'=>['auth','author']],function () {
     Route::get('/dashboard','DashboardController@getDashboard')->name('dashboard');
+
+    Route::resource('blogs','BlogController');
 });

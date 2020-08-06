@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Author;
 
 use App\Blog;
 use Illuminate\Http\Request;
@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 
 use Intervention\Image\ImageManagerStatic as Image;
-
 
 class BlogController extends Controller
 {
@@ -20,8 +19,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::latest()->get();
-        return view('admin.pages.blogs.index',compact('blogs'));
+        $blogs = Auth::user()->blogs()->latest()->get();
+        return view('author.blogs.index',compact('blogs'));
     }
 
     /**
@@ -31,7 +30,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.blogs.create');
+        return view('author.blogs.create');
     }
 
     /**
@@ -48,7 +47,7 @@ class BlogController extends Controller
         $blog->user_id = Auth::id();
         $blog->body = $request->body;
         $blog->status = $request->status;
-        $blog->is_approved = 1;
+        $blog->is_approved = 0;
 
         //upload image
         if ($request->hasFile('image')) {
@@ -72,8 +71,7 @@ class BlogController extends Controller
 
         $blog->save();
         toastr()->success('đã thêm thành công một bài viết');
-        return redirect()->route('admin.blogs.index');
-
+        return redirect()->route('author.blogs.index');
     }
 
     /**
@@ -85,7 +83,7 @@ class BlogController extends Controller
     public function show($id)
     {
         $blog = Blog::find($id);
-        return view('admin.pages.blogs.show',compact('blog'));
+        return view('author.blogs.show',compact('blog'));
     }
 
     /**
@@ -97,7 +95,7 @@ class BlogController extends Controller
     public function edit($id)
     {
         $blog = Blog::find($id);
-        return view('admin.pages.blogs.edit',compact('blog'));
+        return view('author.blogs.edit',compact('blog'));
     }
 
     /**
@@ -149,7 +147,7 @@ class BlogController extends Controller
         $blog->image = $filename;
         $blog->save();
         toastr()->success('đã sửa thành công bài viết');
-        return redirect()->route('admin.blogs.index');
+        return redirect()->route('author.blogs.index');
     }
 
     /**
@@ -176,8 +174,4 @@ class BlogController extends Controller
         return redirect()->back();
     }
 
-    public function pending(){
-        $blogs = Blog::where('is_approved',0)->get();
-        return view('admin.pages.blogs.pending',compact('blogs'));
-    }
 }

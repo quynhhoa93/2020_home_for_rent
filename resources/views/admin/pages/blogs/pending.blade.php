@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-    danh mục
+    bài viết
 @endsection
 
 @push('css')
@@ -10,7 +10,8 @@
     <div id="content">
         <div id="content-header">
             <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">Tables</a> </div>
-            <h1>Tables <a href="{{route('admin.category.create')}}" class="btn btn-success btn-large" >thêm danh mục mới</a> </h1>
+            <h1>Tables</h1>
+            <h1><a href="{{route('admin.blogs.create')}}" class="btn btn-success btn-large" >thêm bài viết mới</a> </h1>
         </div>
         <div class="container-fluid">
             <hr>
@@ -25,30 +26,43 @@
                                 <thead>
                                 <tr>
                                     <th></th>
-                                    <th>tên danh mục</th>
-                                    <th>cấp danh mục</th>
+                                    <th>tên bài viết</th>
+                                    <th>chi tiết bài viết</th>
                                     <th>trạng thái</th>
+                                    <th>phê duyệt</th>
+                                    <td>số lượt xem</td>
+                                    <th>ảnh bài viết</th>
                                     <th>hành động</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($categories as $key=>$category)
+                                @foreach($blogs as $key=>$blog)
                                     <tr>
                                         <td>{{++$key}}</td>
-                                        <td>{{$category->name}}</td>
-                                        <td>{{$category->parent_id}}</td>
+                                        <td>{{$blog->title}}</td>
+                                        <td>{!! str_limit($blog->body,30) !!}</td>
                                         <td>
-                                            @if($category->status == 0)
+                                            @if($blog->status == 0)
                                                 ẩn
                                             @else
                                                 hiện
                                             @endif
                                         </td>
+
+
+                                        @if($blog->is_approved == 0)
+                                            <td style="color: red"> đang chờ admin phê duyệt </td>
+                                        @else
+                                            <td style="color: green"> đã được phê duyệt </td>
+                                        @endif
+                                        <td>{{$blog->view_count}}</td>
+
+                                        <td><img src="{{asset('backend/img/blog/small/'.$blog->image)}}" style="width: 100px"></td>
                                         <td class="center">
-                                            {{--<a href="{{route('admin.singleContact',$contact->id)}}" class="btn btn-success btn-mini">xem chi tiết</a>--}}
-                                            <a href="{{route('admin.category.edit',$category->id)}}" class="btn btn-warning btn-mini">Sửa</a>
-                                            <button class="btn btn-danger btn-mini" type="button" onclick="deleteCategory({{$category->id}})"><i>xoá</i></button>
-                                            <form id="delete-from-{{$category->id}}" action="{{route('admin.category.destroy',$category->id)}}" method="POST" style="display:none;">
+                                            <a href="{{route('admin.blogs.show',$blog->id)}}" class="btn btn-success btn-mini">chi tiết</a>
+                                            <a href="{{route('admin.blogs.edit',$blog->id)}}" class="btn btn-warning btn-mini">Sửa</a>
+                                            <button class="btn btn-danger btn-mini" type="button" onclick="deleteCategory({{$blog->id}})"><i>xoá</i></button>
+                                            <form id="delete-from-{{$blog->id}}" action="{{route('admin.blogs.destroy',$blog->id)}}" method="POST" style="display:none;">
                                                 @csrf
                                                 @method('DELETE')
                                             </form>
@@ -82,7 +96,7 @@
                 text:"bạn có chắc muốn xoá san pham này???",
                 icon:'warning',
                 showCancelButton:true,
-                confirmButtonText:'có',
+                confirmButtonText:'có ',
                 cancelButtonText:'thôi',
                 reverseButtons:true
             }).then((result)=>{

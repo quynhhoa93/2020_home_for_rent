@@ -20,7 +20,9 @@ class CreateBlogsTable extends Migration
             $table->string('slug');
             $table->string('image');
             $table->string('body');
-            $table->string('status');
+            $table->tinyInteger('status')->default(0);
+            $table->tinyInteger('is_approved')->default(0);
+            $table->integer('view_count')->default(0);
             $table->timestamps();
         });
     }

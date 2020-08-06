@@ -3,23 +3,22 @@
     <ul>
         @if(Auth::user()->role->id == 1)
             <?php echo Auth::user()->role->id ?>
-            <li><a href="{{route('admin.dashboard')}}"><i class="icon icon-home"></i> <span>Dashboard</span></a></li>
+            <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}"><a href="{{route('admin.dashboard')}}"><i class="icon icon-home"></i> <span>Dashboard</span></a></li>
 
-            <li class="submenu"><a href="#"><i class="icon icon-th-list"></i> <span>danh mục</span> <span
-                            class="label label-important">3</span></a>
-                <ul>
-                    <li><a href="{{route('admin.category.index')}}">tất cả danh mục</a></li>
-                    <li><a href="{{route('admin.category.create')}}">thêm danh mục</a></li>
-                </ul>
-            </li>
+            <li class="{{ Request::is('admin/category') ? 'active' : '' }}"><a href="{{route('admin.category.index')}}"><i class="icon icon-th-list"></i> <span>tất cả danh mục</span></a></li>
 
-            <li><a href="{{route('admin.getContact')}}"><i class="icon icon-home"></i> <span>phản ánh của khách hàng</span></a></li>
+            <li class="{{ Request::is('admin/contact') ? 'active' : '' }}"><a href="{{route('admin.getContact')}}"><i class="icon icon-home"></i> <span>phản ánh của khách hàng</span></a></li>
+
+            <li class="{{ Request::is('admin/blogs') ? 'active' : '' }}"><a href="{{route('admin.blogs.index')}}"><i class="icon icon-home"></i> <span>bài viết blog</span></a></li>
+
+            <li class="{{ Request::is('admin/pending/blogs') ? 'active' : '' }}"><a href="{{route('admin.blog.pending')}}"><i class="icon icon-home"></i> <span>bài viết blog chờ phê duyệt</span></a></li>
         @endif
 
 
         @if(Auth::user()->role->id === 2 )
-            <li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a></li>
-            <li><a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a></li>
+            <li class="{{ Request::is('author/dashboard') ? 'active' : '' }}"><a href="{{route('author.dashboard')}}"><i class="icon icon-home"></i> <span>Dashboard</span></a></li>
+
+            <li class="{{ Request::is('author/blogs') ? 'active' : '' }}"><a href="{{route('author.blogs.index')}}"><i class="icon icon-home"></i> <span>Dashboard</span></a></li>
         @endif
     </ul>
 </div>
