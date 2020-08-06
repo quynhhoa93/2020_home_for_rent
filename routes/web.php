@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('admin.layouts.master');
+    return view('welcome');
 });
 
 Auth::routes();
@@ -26,9 +26,10 @@ Route::group(['prefix'=>'/admin','namespace'=>'Admin','as'=>'admin.','middleware
     Route::get('/dashboard','DashboardController@getDashboard')->name('dashboard');
 
     Route::resource('/category','CategoryController');
+    Route::resource('/blogs','BlogController');
 
     //contact
-    Route::get('/contact','ContactController@index');
+    Route::get('/contact','ContactController@index')->name('getContact');
     Route::get('/single-contact/{id}','ContactController@singleContact')->name('singleContact');
     Route::delete('/delete-contact/{id}','ContactController@deleteContact')->name('deleteContact');
 });

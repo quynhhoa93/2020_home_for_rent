@@ -8,6 +8,6 @@ use App\Http\Controllers\Controller;
 class DashboardController extends Controller
 {
     public function getDashboard(){
-        return view('author.pages.dashboard');
+        return view('author.dashboard');
     }
 }
