@@ -8,14 +8,15 @@
 					<div class="breadcrumb_content style2">
 						<ol class="breadcrumb">
 						    <li class="breadcrumb-item"><a href="#">Home</a></li>
-						    <li class="breadcrumb-item active text-thm" aria-current="page">Simple Listing – Grid View</li>
+						    <li class="breadcrumb-item active text-thm" aria-current="page">Blog</li>
 						</ol>
-						<h2 class="breadcrumb_title">Blog</h2>
+						{{-- <h2 class="breadcrumb_title">Blog</h2> --}}
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-8">
+                @foreach ($blog as $item)
+                <div class="col-lg-8">
 					<div class="main_blog_post_content">
 						<div class="for_blog feat_property">
 							<div class="thumb">
@@ -24,17 +25,16 @@
 							</div>
 							<div class="details">
 								<div class="tc_content">
-									<h4 class="mb15">Redfin Ranks the Most Competitive Neighborhoods of 2020</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis et sem sed sollicitudin. Donec non odio neque. Aliquam hendrerit sollicitudin purus, quis rutrum mi accumsan nec. Quisque bibendum orci ac nibh
-									facilisis, at malesuada orci congue. Nullam tempus sollicitudin cursus. Ut et adipiscing erat. Curabitur this is a text link libero tempus congue.</p>
+									<h4 class="mb15">{{ $item->title }}</h4>
+									<p>{{ $item->body }}</p>
 								</div>
 								<div class="fp_footer">
 									<ul class="fp_meta float-left mb0">
 										<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
-										<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
-										<li class="list-inline-item"><a href="#"><span class="flaticon-calendar pr10"></span> January 16, 2020</a></li>
+										<li class="list-inline-item"><a href="#">{{ $item->user->name }}</a></li>
+										<li class="list-inline-item"><a href="#"><span class="flaticon-calendar pr10"></span> {{ $item->created_at }}</a></li>
 									</ul>
-									<a class="fp_pdate float-right text-thm" href="/blog/detail">Read More <span class="flaticon-next"></span></a>
+									<a class="fp_pdate float-right text-thm" href="/blog/{{$item->id}}">Read More <span class="flaticon-next"></span></a>
 								</div>
 							</div>
 						</div>
@@ -61,6 +61,8 @@
 						</div>
 					</div>
 				</div>
+                @endforeach
+
 				<div class="col-lg-4 col-xl-4">
 					<div class="sidebar_search_widget">
 						<div class="blog_search_widget">

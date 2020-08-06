@@ -19,10 +19,10 @@
 					<div class="main_blog_post_content">
 						<div class="mbp_thumb_post">
 							<div class="blog_sp_tag"><a href="#">Construction</a></div>
-							<h3 class="blog_sp_title">Redfin Ranks the Most Competitive Neighborhoods of 2020</h3>
+							<h3 class="blog_sp_title">{{ $blog->title }}</h3>
 							<ul class="blog_sp_post_meta">
 								<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
-								<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
+								<li class="list-inline-item"><a href="#">{{ $blog->user->name }}</a></li>
 								<li class="list-inline-item"><span class="flaticon-calendar"></span></li>
 								<li class="list-inline-item"><a href="#">January 16, 2020</a></li>
 								<li class="list-inline-item"><span class="flaticon-view"></span></li>

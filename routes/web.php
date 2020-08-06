@@ -22,12 +22,8 @@ Route::group(['namespace' => 'Client'], function () {
 
     Route::group(['prefix' => 'blog'], function () {
         Route::get('','BlogController@index');
-        Route::get('detail','BlogController@detail');
+        Route::get('/{detail}','BlogController@detail');
     });
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 // Admin
 // Route::get('/', function () {

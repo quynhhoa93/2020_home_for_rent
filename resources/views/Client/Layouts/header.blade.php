@@ -23,7 +23,7 @@
                     <a href="/"><span class="title">Home</span></a>
                 </li>
                 <li>
-                    <a href="listing"><span class="title">Listing</span></a>
+                    <a href="/listing"><span class="title">Listing</span></a>
                 </li>
                 <li>
                     <a href=""><span class="title">Pages</span></a>
@@ -52,10 +52,10 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="blog"><span class="title">Blog</span></a>
+                    <a href="/blog"><span class="title">Blog</span></a>
                 </li>
                 <li class="last">
-                    <a href="contact"><span class="title">Contact</span></a>
+                    <a href="/contact"><span class="title">Contact</span></a>
                 </li>
                 <li class="list-inline-item list_s"><a href="#" class="btn flaticon-user" data-toggle="modal" data-target=".bd-example-modal-lg"> <span class="dn-lg">Login/Register</span></a></li>
                 <li class="list-inline-item add_listing"><a href="page-add-new-property.html"><span class="flaticon-plus"></span><span class="dn-lg"> Create Listing</span></a></li>
