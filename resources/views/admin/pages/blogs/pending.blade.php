@@ -29,7 +29,6 @@
                                     <th>tên bài viết</th>
                                     <th>chi tiết bài viết</th>
                                     <th>trạng thái</th>
-                                    <th>phê duyệt</th>
                                     <td>số lượt xem</td>
                                     <th>ảnh bài viết</th>
                                     <th>hành động</th>
@@ -49,16 +48,24 @@
                                             @endif
                                         </td>
 
-
-                                        @if($blog->is_approved == 0)
-                                            <td style="color: red"> đang chờ admin phê duyệt </td>
-                                        @else
-                                            <td style="color: green"> đã được phê duyệt </td>
-                                        @endif
                                         <td>{{$blog->view_count}}</td>
 
                                         <td><img src="{{asset('backend/img/blog/small/'.$blog->image)}}" style="width: 100px"></td>
                                         <td class="center">
+                                            @if($blog->is_approved == 1)
+                                                <button type="button" class="btn btn-success btn-mini ">
+                                                    <span>đã được phê duyệt</span>
+                                                </button>
+                                            @else
+                                                <button type="button" class="btn btn-danger btn-mini" onclick="approvePost({{ $blog->id }})">
+                                                    <span>chua được phê duyệt</span>
+                                                </button>
+                                                <form method="post" action="{{ route('admin.blog.approve',$blog->id) }}" id="approval-form" style="display: none">
+                                                    @csrf
+                                                    @method('PUT')
+                                                </form>
+                                            @endif
+
                                             <a href="{{route('admin.blogs.show',$blog->id)}}" class="btn btn-success btn-mini">chi tiết</a>
                                             <a href="{{route('admin.blogs.edit',$blog->id)}}" class="btn btn-warning btn-mini">Sửa</a>
                                             <button class="btn btn-danger btn-mini" type="button" onclick="deleteCategory({{$blog->id}})"><i>xoá</i></button>
@@ -116,4 +123,38 @@
         }
     </script>
 
+    <script type="text/javascript">
+        function approvePost(id){
+            const swalWithBootstrapButtons=Swal.mixin({
+                customClass:{
+                    confirmButton:'btnbtn-success',
+                    cancelButton:'btnbtn-danger'
+                },
+                buttonsStyling:false
+            })
+
+            swalWithBootstrapButtons.fire({
+                title:'xoá danh mục',
+                text:"bạn có chắc muốn xoá san pham này???",
+                icon:'warning',
+                showCancelButton:true,
+                confirmButtonText:'có ',
+                cancelButtonText:'thôi',
+                reverseButtons:true
+            }).then((result)=>{
+                if(result.value){
+                    event.preventDefault();
+                    document.getElementById('approval-form').submit();
+                }else if(
+                    result.dismiss === Swal.DismissReason.cancel
+                ){
+                    swalWithBootstrapButtons.fire(
+                        'cảnh báo',
+                        'san pham này vẫn tồn tại',
+                        'error'
+                    )
+                }
+            })
+        }
+    </script>
 @endpush

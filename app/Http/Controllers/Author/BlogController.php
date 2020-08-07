@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\Author;
 
 use App\Blog;
+use App\Notifications\NewAuthorPost;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 
+use Illuminate\Support\Facades\Notification;
 use Intervention\Image\ImageManagerStatic as Image;
 
 class BlogController extends Controller
@@ -70,6 +73,10 @@ class BlogController extends Controller
         }
 
         $blog->save();
+
+        $users = User::where('role_id',1)->get();
+        Notification::send($users,new NewAuthorPost($blog));
+
         toastr()->success('đã thêm thành công một bài viết');
         return redirect()->route('author.blogs.index');
     }
@@ -83,6 +90,10 @@ class BlogController extends Controller
     public function show($id)
     {
         $blog = Blog::find($id);
+        if($blog->user_id != Auth::id()){
+            toastr()->error('ban khong thuc hien duoc chuc nang nay');
+            return redirect()->back();
+        }
         return view('author.blogs.show',compact('blog'));
     }
 
@@ -95,6 +106,10 @@ class BlogController extends Controller
     public function edit($id)
     {
         $blog = Blog::find($id);
+        if($blog->user_id != Auth::id()){
+            toastr()->error('ban khong thuc hien duoc chuc nang nay');
+            return redirect()->back();
+        }
         return view('author.blogs.edit',compact('blog'));
     }
 
@@ -107,7 +122,12 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $blog = Blog::find($id);
+        if($blog->user_id != Auth::id()){
+            toastr()->error('ban khong thuc hien duoc chuc nang nay');
+            return redirect()->back();
+        }
         $blog->title = $request->title;
         $blog->slug = str_slug($request->title);
         $blog->user_id = Auth::id();
@@ -159,6 +179,10 @@ class BlogController extends Controller
     public function destroy($id)
     {
         $blog = Blog::find($id);
+        if($blog->user_id != Auth::id()){
+            toastr()->error('ban khong thuc hien duoc chuc nang nay');
+            return redirect()->back();
+        }
         $large_image_path = 'backend/img/blog/large/';
         $medium_image_path = 'backend/img/blog/medium/';
         $small_image_path = 'backend/img/blog/small/';
