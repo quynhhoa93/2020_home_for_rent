@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Blog;
+use App\Notifications\AuthorPostApproved;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -179,5 +180,19 @@ class BlogController extends Controller
     public function pending(){
         $blogs = Blog::where('is_approved',0)->get();
         return view('admin.pages.blogs.pending',compact('blogs'));
+    }
+
+    public function approve($id){
+        $blog = Blog::find($id);
+        if($blog->is_approved == 0){
+            $blog->is_approved = 1 ;
+            $blog->save();
+            $blog->user->notify(new AuthorPostApproved($blog));
+
+            toastr()->success('bai dang da duoc cap quyen');
+        }else{
+            toastr()->info('bai dang chua duoc cap quyen');
+        }
+        return redirect()->back();
     }
 }
