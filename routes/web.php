@@ -11,9 +11,27 @@
 |
 */
 
+<<<<<<< Updated upstream
 Route::get('/', function () {
     return view('welcome');
 });
+=======
+    Route::get('contact','ClientController@contact');
+
+    Route::get('login','LoginController@ShowLoginForm');
+
+    Route::get('listing',"ClientController@listing");
+
+    Route::group(['prefix' => 'register'], function () {
+        route::get('','RegisterController@index');
+        route::post('','RegisterController@signup');
+    });
+
+    Route::group(['prefix' => 'blog'], function () {
+        Route::get('','BlogController@index');
+        Route::get('/{detail}','BlogController@detail');
+    });
+>>>>>>> Stashed changes
 
 Auth::routes();
 
