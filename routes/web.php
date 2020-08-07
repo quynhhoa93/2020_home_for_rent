@@ -10,13 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-<<<<<<< Updated upstream
-Route::get('/', function () {
-    return view('welcome');
-});
-=======
-    Route::get('contact','ClientController@contact');
+Route::group(['namespace' => 'Client'], function () {
+    Route::get('','ClientController@index');
+Route::get('contact','ClientController@contact');
 
     Route::get('login','LoginController@ShowLoginForm');
 
@@ -31,7 +27,7 @@ Route::get('/', function () {
         Route::get('','BlogController@index');
         Route::get('/{detail}','BlogController@detail');
     });
->>>>>>> Stashed changes
+ });
 
 Auth::routes();
 
