@@ -4,7 +4,7 @@
         <nav>
             <!-- Menu Toggle btn-->
             <div class="menu-toggle">
-                <img class="nav_logo_img img-fluid" src="assets/images/header-logo.png" alt="header-logo.png">
+                <img class="nav_logo_img img-fluid" src="/assets/images/header-logo.png" alt="header-logo.png">
                 <button type="button" id="menu-btn">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -12,21 +12,18 @@
                 </button>
             </div>
             <a href="/" class="navbar_brand float-left dn-smd">
-                <img class="logo1 img-fluid" src="assets/images/header-logo2.png" alt="header-logo.png">
-                <img class="logo2 img-fluid" src="assets/images/header-logo2.png" alt="header-logo2.png">
+                <img class="logo1 img-fluid" src="/assets/images/header-logo2.png" alt="header-logo.png">
+                <img class="logo2 img-fluid" src="/assets/images/header-logo2.png" alt="header-logo2.png">
                 <span>FindHouse</span>
             </a>
             <!-- Responsive Menu Structure-->
             <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
             <ul id="respMenu" class="ace-responsive-menu text-right" data-menu-style="horizontal">
                 <li>
-                    <a href="/public"><span class="title">Home</span></a>
+                    <a href="/"><span class="title">Home</span></a>
                 </li>
                 <li>
-                    <a href="/public/listing"><span class="title">Listing Buy</span></a>
-                </li>
-                <li>
-                    <a href="/public/listing-rent"><span class="title">Listing Rent</span></a>
+                    <a href="/listing"><span class="title">Listing</span></a>
                 </li>
                 <li>
                     <a href=""><span class="title">Pages</span></a>
@@ -55,10 +52,10 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/public/blog"><span class="title">Blog</span></a>
+                    <a href="/blog"><span class="title">Blog</span></a>
                 </li>
                 <li class="last">
-                    <a href="/public/contact"><span class="title">Contact</span></a>
+                    <a href="/contact"><span class="title">Contact</span></a>
                 </li>
                 <li class="list-inline-item list_s"><a href="#" class="btn flaticon-user" data-toggle="modal" data-target=".bd-example-modal-lg"> <span class="dn-lg">Login/Register</span></a></li>
                 <li class="list-inline-item add_listing"><a href="page-add-new-property.html"><span class="flaticon-plus"></span><span class="dn-lg"> Create Listing</span></a></li>
@@ -90,7 +87,7 @@
                       <div class="row mt25 tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                           <div class="col-lg-6 col-xl-6">
                               <div class="login_thumb">
-                                  <img class="img-fluid w100" src="assets/images/resource/login.jpg" alt="login.jpg">
+                                  <img class="img-fluid w100" src="/assets/images/resource/login.jpg" alt="login.jpg">
                               </div>
                           </div>
                           <div class="col-lg-6 col-xl-6">
@@ -134,7 +131,7 @@
                       <div class="row mt25 tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                           <div class="col-lg-6 col-xl-6">
                               <div class="regstr_thumb">
-                                  <img class="img-fluid w100" src="assets/images/resource/regstr.jpg" alt="regstr.jpg">
+                                  <img class="img-fluid w100" src="/assets/images/resource/regstr.jpg" alt="regstr.jpg">
                               </div>
                           </div>
                           <div class="col-lg-6 col-xl-6">
@@ -204,7 +201,7 @@
     <div class="mobile-menu">
         <div class="header stylehome1">
             <div class="main_logo_home2 text-center">
-                <img class="nav_logo_img img-fluid mt20" src="assets/images/header-logo2.png" alt="header-logo2.png">
+                <img class="nav_logo_img img-fluid mt20" src="/assets/images/header-logo2.png" alt="header-logo2.png">
                 <span class="mt20">FindHouse</span>
             </div>
             <ul class="menu_bar_home2">

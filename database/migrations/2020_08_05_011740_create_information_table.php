@@ -18,11 +18,15 @@ class CreateInformationTable extends Migration
             $table->bigInteger('id_type')->default(null);
             $table->bigInteger('id_user')->default(null);
             $table->string('name');
+            $table->string('city');
             $table->string('address');
             $table->text('description');
             $table->tinyInteger('status');
+            $table->tinyInteger('is_approve');
             $table->string('image');
             $table->string('price');
+            $table->string('slug');
+            $table->string('apartment_type');
             $table->timestamps();
         });
     }

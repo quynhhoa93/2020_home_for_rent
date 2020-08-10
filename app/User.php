@@ -44,4 +44,14 @@ class User extends Authenticatable
     public function blogs(){
         return $this->hasMany('App\Blog');
     }
+
+    public function comments(){
+        return $this->hasMany('App\Comment');
+    }
+
+    protected $table = "users";
+
+    public function information(){
+        return $this->hasMany('App\Information','id_user','id');
+    }
 }

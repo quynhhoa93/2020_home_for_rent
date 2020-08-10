@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Author;
 
 use App\Blog;
-use App\Notifications\AuthorPostApproved;
+use App\Notifications\NewAuthorPost;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 
+use Illuminate\Support\Facades\Notification;
 use Intervention\Image\ImageManagerStatic as Image;
-
 
 class BlogController extends Controller
 {
@@ -21,8 +22,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::latest()->get();
-        return view('admin.pages.blogs.index',compact('blogs'));
+        $blogs = Auth::user()->blogs()->latest()->get();
+        return view('author.blogs.index',compact('blogs'));
     }
 
     /**
@@ -32,7 +33,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.blogs.create');
+        return view('author.blogs.create');
     }
 
     /**
@@ -49,7 +50,7 @@ class BlogController extends Controller
         $blog->user_id = Auth::id();
         $blog->body = $request->body;
         $blog->status = $request->status;
-        $blog->is_approved = 1;
+        $blog->is_approved = 0;
 
         //upload image
         if ($request->hasFile('image')) {
@@ -72,9 +73,12 @@ class BlogController extends Controller
         }
 
         $blog->save();
-        toastr()->success('đã thêm thành công một bài viết');
-        return redirect()->route('admin.blogs.index');
 
+        $users = User::where('role_id',1)->get();
+        Notification::send($users,new NewAuthorPost($blog));
+
+        toastr()->success('đã thêm thành công một bài viết');
+        return redirect()->route('author.blogs.index');
     }
 
     /**
@@ -86,7 +90,11 @@ class BlogController extends Controller
     public function show($id)
     {
         $blog = Blog::find($id);
-        return view('admin.pages.blogs.show',compact('blog'));
+        if($blog->user_id != Auth::id()){
+            toastr()->error('ban khong thuc hien duoc chuc nang nay');
+            return redirect()->back();
+        }
+        return view('author.blogs.show',compact('blog'));
     }
 
     /**
@@ -98,7 +106,11 @@ class BlogController extends Controller
     public function edit($id)
     {
         $blog = Blog::find($id);
-        return view('admin.pages.blogs.edit',compact('blog'));
+        if($blog->user_id != Auth::id()){
+            toastr()->error('ban khong thuc hien duoc chuc nang nay');
+            return redirect()->back();
+        }
+        return view('author.blogs.edit',compact('blog'));
     }
 
     /**
@@ -110,7 +122,12 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $blog = Blog::find($id);
+        if($blog->user_id != Auth::id()){
+            toastr()->error('ban khong thuc hien duoc chuc nang nay');
+            return redirect()->back();
+        }
         $blog->title = $request->title;
         $blog->slug = str_slug($request->title);
         $blog->user_id = Auth::id();
@@ -150,7 +167,7 @@ class BlogController extends Controller
         $blog->image = $filename;
         $blog->save();
         toastr()->success('đã sửa thành công bài viết');
-        return redirect()->route('admin.blogs.index');
+        return redirect()->route('author.blogs.index');
     }
 
     /**
@@ -162,6 +179,10 @@ class BlogController extends Controller
     public function destroy($id)
     {
         $blog = Blog::find($id);
+        if($blog->user_id != Auth::id()){
+            toastr()->error('ban khong thuc hien duoc chuc nang nay');
+            return redirect()->back();
+        }
         $large_image_path = 'backend/img/blog/large/';
         $medium_image_path = 'backend/img/blog/medium/';
         $small_image_path = 'backend/img/blog/small/';
@@ -177,22 +198,4 @@ class BlogController extends Controller
         return redirect()->back();
     }
 
-    public function pending(){
-        $blogs = Blog::where('is_approved',0)->get();
-        return view('admin.pages.blogs.pending',compact('blogs'));
-    }
-
-    public function approve($id){
-        $blog = Blog::find($id);
-        if($blog->is_approved == 0){
-            $blog->is_approved = 1 ;
-            $blog->save();
-            $blog->user->notify(new AuthorPostApproved($blog));
-
-            toastr()->success('bai dang da duoc cap quyen');
-        }else{
-            toastr()->info('bai dang chua duoc cap quyen');
-        }
-        return redirect()->back();
-    }
 }

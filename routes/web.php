@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Client
 Route::group(['namespace' => 'Client'], function () {
     Route::get('','ClientController@index');
     Route::get('contact','ClientController@contact');
@@ -54,9 +53,13 @@ Route::group(['namespace' => 'Client'], function () {
 // });
 
 //     //contact
-//     Route::get('/contact','ContactController@index');
+//     Route::get('/contact','ContactController@index')->name('getContact');
 //     Route::get('/single-contact/{id}','ContactController@singleContact')->name('singleContact');
 //     Route::delete('/delete-contact/{id}','ContactController@deleteContact')->name('deleteContact');
+
+//     //phe duyet bai viet tu author
+//     Route::get('/pending/blogs','BlogController@pending')->name('blog.pending');
+//     Route::put('/blog/{id}/approve','BlogController@approve')->name('blog.approve');
 // });
 
 // Route::group(['prefix'=>'/author','namespace'=>'Author','as'=>'author.','middleware'=>['auth','author']],function () {
