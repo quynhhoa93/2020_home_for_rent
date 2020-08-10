@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Information;
+use App\Notifications\AuthorPostInformationApproved;
 use App\Tinhthanhpho;
 use App\TypeAsset;
 use Illuminate\Http\Request;
@@ -188,6 +189,25 @@ class InformationController extends Controller
 
         $information->delete();
         toastr()->warning('đã xoa thành công một bài viết');
+        return redirect()->back();
+    }
+
+    public function pending(){
+        $informations = Information::where('is_approve',0)->get();
+        return view('admin.pages.information.pending',compact('informations'));
+    }
+
+    public function approve($id){
+        $information = Information::find($id);
+        if($information->is_approved == 0){
+            $information->is_approve = 1 ;
+            $information->save();
+            $information->user->notify(new AuthorPostInformationApproved($information));
+
+            toastr()->success('bai dang da duoc cap quyen');
+        }else{
+            toastr()->info('bai dang chua duoc cap quyen');
+        }
         return redirect()->back();
     }
 }

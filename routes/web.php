@@ -72,6 +72,10 @@ Route::group(['prefix'=>'/admin','namespace'=>'Admin','as'=>'admin.','middleware
     //phe duyet bai viet tu author
     Route::get('/pending/blogs','BlogController@pending')->name('blog.pending');
     Route::put('/blog/{id}/approve','BlogController@approve')->name('blog.approve');
+
+    //phe duyet mua ban tu author
+    Route::get('/pending/information','InformationController@pending')->name('information.pending');
+    Route::put('/information/{id}/approve','InformationController@approve')->name('information.approve');
 });
 
 

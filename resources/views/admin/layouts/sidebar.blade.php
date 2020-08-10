@@ -16,7 +16,9 @@
             <li class="{{ Request::is('admin/type-asset') ? 'active' : '' }}"><a href="{{route('admin.type-asset.index')}}"><i class="icon icon-list"></i> <span>loại tài sản</span></a></li>
 
             <li class="{{ Request::is('admin/information') ? 'active' : '' }}"><a href="{{route('admin.information.index')}}"><i class="icon icon-list"></i> <span>thông tin mua/thuê nhà đất</span></a></li>
-        @endif
+
+            <li class="{{ Request::is('admin/pending/information') ? 'active' : '' }}"><a href="{{route('admin.information.pending')}}"><i class="icon icon-home"></i> <span>bài viết mua/thuê nhà đất chờ phê duyệt</span></a></li>
+            @endif
 
 
         @if(Auth::user()->role->id === 2 )
