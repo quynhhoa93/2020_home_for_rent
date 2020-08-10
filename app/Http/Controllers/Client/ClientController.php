@@ -22,9 +22,4 @@ class ClientController extends Controller
     {
         return view('client.home.contact');
     }
-
-    // public function search(Request $request)
-    // {
-    //     $product = Information::where('name','like','%'.$request->key)
-    // }
 }

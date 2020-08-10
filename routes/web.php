@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,6 +20,36 @@ Route::get('/', function () {
 //        Route::get('','BlogController@index');
 //        Route::get('/{detail}','BlogController@detail');
 //    });
+=======
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+Route::group(['namespace' => 'Client'], function () {
+    Route::get('','ClientController@index');
+Route::get('contact','ClientController@contact');
+
+    Route::get('login','LoginController@ShowLoginForm');
+
+    Route::get('listing',"ClientController@listing");
+
+    Route::group(['prefix' => 'register'], function () {
+        route::get('','RegisterController@index');
+        route::post('','RegisterController@signup');
+    });
+
+    Route::group(['prefix' => 'blog'], function () {
+        Route::get('','BlogController@index');
+        Route::get('/{detail}','BlogController@detail');
+    });
+ });
+>>>>>>> d389c0e593e9b1109c6ef4e5bb535b8b67853df1
 
 Auth::routes();
 
