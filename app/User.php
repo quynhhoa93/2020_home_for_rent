@@ -19,6 +19,8 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+    protected $primaryKey = 'id';
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -43,6 +45,10 @@ class User extends Authenticatable
 
     public function blogs(){
         return $this->hasMany('App\Blog');
+    }
+
+    public function informations(){
+        return $this->hasMany('App\Information');
     }
 
     public function comments(){

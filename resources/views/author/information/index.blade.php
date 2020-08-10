@@ -11,7 +11,7 @@
         <div id="content-header">
             <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">Tables</a> </div>
             <h1>Tables</h1>
-            <h1><a href="{{route('admin.information.create')}}" class="btn btn-success btn-large" >thêm bài viết mới</a> </h1>
+            <h1><a href="{{route('author.information.create')}}" class="btn btn-success btn-large" >thêm bài viết mới</a> </h1>
         </div>
         <div class="container-fluid">
             <hr>
@@ -58,10 +58,10 @@
 
                                         <td><img src="{{asset('backend/img/information/small/'.$information->image)}}" style="width: 100px"></td>
                                         <td class="center">
-                                            <a href="{{route('admin.information.show',$information->id)}}" class="btn btn-success btn-mini">chi tiết</a>
-                                            <a href="{{route('admin.information.edit',$information->id)}}" class="btn btn-warning btn-mini">Sửa</a>
+                                            <a href="{{route('author.information.show',$information->id)}}" class="btn btn-success btn-mini">chi tiết</a>
+                                            <a href="{{route('author.information.edit',$information->id)}}" class="btn btn-warning btn-mini">Sửa</a>
                                             <button class="btn btn-danger btn-mini" type="button" onclick="deleteCategory({{$information->id}})"><i>xoá</i></button>
-                                            <form id="delete-from-{{$information->id}}" action="{{route('admin.information.destroy',$information->id)}}" method="POST" style="display:none;">
+                                            <form id="delete-from-{{$information->id}}" action="{{route('author.information.destroy',$information->id)}}" method="POST" style="display:none;">
                                                 @csrf
                                                 @method('DELETE')
                                             </form>

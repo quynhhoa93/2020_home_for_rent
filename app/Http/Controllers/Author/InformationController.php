@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Author;
 
+use App\Information;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class InformationController extends Controller
 {
@@ -14,7 +16,9 @@ class InformationController extends Controller
      */
     public function index()
     {
-        //
+//        dd(Auth::user());
+        $informations = Auth::user()->informations()->get();
+        return view('author.information.index',compact('informations'));
     }
 
     /**

@@ -28,30 +28,30 @@ Route::get('/', function () {
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-Route::group(['namespace' => 'Client'], function () {
-    Route::get('','ClientController@index');
-Route::get('contact','ClientController@contact');
-
-    Route::get('login','LoginController@ShowLoginForm');
-
-    Route::get('listing',"ClientController@listing");
-
-    Route::group(['prefix' => 'register'], function () {
-        route::get('','RegisterController@index');
-        route::post('','RegisterController@signup');
-    });
-
-    Route::group(['prefix' => 'blog'], function () {
-        Route::get('','BlogController@index');
-        Route::get('/{detail}','BlogController@detail');
-    });
- });
+//*/
+//Route::group(['namespace' => 'Client'], function () {
+//    Route::get('','ClientController@index');
+//Route::get('contact','ClientController@contact');
+//
+//    Route::get('login','LoginController@ShowLoginForm');
+//
+//    Route::get('listing',"ClientController@listing");
+//
+//    Route::group(['prefix' => 'register'], function () {
+//        route::get('','RegisterController@index');
+//        route::post('','RegisterController@signup');
+//    });
+//
+//    Route::group(['prefix' => 'blog'], function () {
+//        Route::get('','BlogController@index');
+//        Route::get('/{detail}','BlogController@detail');
+//    });
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
+//Route::get('/home', 'HomeController@index')->name('home');
+//
 Route::get('/dang-nhap','IndexController@getLogin')->name('getLogin');
 
 

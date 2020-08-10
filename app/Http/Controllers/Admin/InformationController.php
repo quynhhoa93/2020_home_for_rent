@@ -7,6 +7,7 @@ use App\Tinhthanhpho;
 use App\TypeAsset;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -47,6 +48,7 @@ class InformationController extends Controller
 //        dd($data);
         $information = new Information();
         $information->id_type = $request->type_id;
+        $information->user_id = Auth::id();
         $information->name = $request->name;
         $information->city = $request->city;
         $information->address = $request->address;
@@ -55,7 +57,7 @@ class InformationController extends Controller
         $information->status = $request->status;
         $information->slug = str_slug($request->name);
         $information->apartment_type = $request->apartment_type;
-        $information->is_approved = 1;
+        $information->is_approve = 1;
 
         //upload image
         if ($request->hasFile('image')) {
@@ -77,7 +79,10 @@ class InformationController extends Controller
             }
         }
 
-        dd($information);
+//        dd($information);
+        $information->save();
+        toastr()->success('đã thêm thành công một bài viết');
+        return redirect()->route('admin.information.index');
     }
 
     /**
@@ -99,7 +104,10 @@ class InformationController extends Controller
      */
     public function edit($id)
     {
-        //
+        $typeAssets = TypeAsset::all();
+        $cities = Tinhthanhpho::all();
+        $information = Information::find($id);
+        return view('admin.pages.information.edit',compact('information','typeAssets','cities'));
     }
 
     /**
@@ -111,7 +119,52 @@ class InformationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $information = Information::find($id);
+        $information->id_type = $request->type_id;
+        $information->user_id = Auth::id();
+        $information->name = $request->name;
+        $information->city = $request->city;
+        $information->address = $request->address;
+        $information->description = $request->description;
+        $information->price = $request->price;
+        $information->status = $request->status;
+        $information->slug = str_slug($request->name);
+        $information->apartment_type = $request->apartment_type;
+        $information->is_approve = 1;
+
+        //upload image
+        if ($request->hasFile('image')) {
+            $image_tmp = Input::file('image');
+            if ($image_tmp->isValid()) {
+                $extension = $image_tmp->getClientOriginalExtension();
+                $filename = rand(111, 99999) . '.' . $extension;
+                $large_image_path = 'backend/img/information/large/' . $filename;
+                $medium_image_path = 'backend/img/information/medium/' . $filename;
+                $small_image_path = 'backend/img/information/small/' . $filename;
+
+                //resize image
+                Image::make($image_tmp)->save($large_image_path);
+                Image::make($image_tmp)->resize(600, 600)->save($medium_image_path);
+                Image::make($image_tmp)->resize(300, 300)->save($small_image_path);
+
+                $large_image_path = 'backend/img/information/large/';
+                $medium_image_path = 'backend/img/information/medium/';
+                $small_image_path = 'backend/img/information/small/';
+
+                if (file_exists($small_image_path.$information->image)){
+                    unlink($small_image_path.$information->image);
+                    unlink($medium_image_path.$information->image);
+                    unlink($large_image_path.$information->image);
+                }
+            }
+        } else{
+            $filename = $request->current_image;
+        }
+
+        $information->image = $filename;
+        $information->save();
+        toastr()->success('đã sửa thành công bài viết');
+        return redirect()->route('admin.information.index');
     }
 
     /**
@@ -122,6 +175,19 @@ class InformationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $information = Information::find($id);
+        $large_image_path = 'backend/img/information/large/';
+        $medium_image_path = 'backend/img/information/medium/';
+        $small_image_path = 'backend/img/information/small/';
+
+        if (file_exists($small_image_path.$information->image)){
+            unlink($small_image_path.$information->image);
+            unlink($medium_image_path.$information->image);
+            unlink($large_image_path.$information->image);
+        }
+
+        $information->delete();
+        toastr()->warning('đã xoa thành công một bài viết');
+        return redirect()->back();
     }
 }
