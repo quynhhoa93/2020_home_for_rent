@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Information;
+use App\User;
 
 use Carbon\Carbon;
 
-use App\{Information,User,images,TypeAsset};
+// use App\{Information,User,images,TypeAsset};
 
 class ClientController extends Controller
 {
@@ -20,8 +21,8 @@ class ClientController extends Controller
     public function listing()
     {
         $data['user'] = User::all();
-        $data['images'] = images::all();
-        $data['typeasset'] = TypeAsset::all();
+        // $data['images'] = images::all();
+        // $data['typeasset'] = TypeAsset::all();
 
         $data['nha_ban'] = Information::where('id_type',1)->paginate(1);
 

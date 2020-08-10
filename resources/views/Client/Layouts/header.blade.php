@@ -20,7 +20,7 @@
             <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
             <ul id="respMenu" class="ace-responsive-menu text-right" data-menu-style="horizontal">
                 <li>
-                    <a href="/public"><span class="title">Home</span></a>
+                    <a href="/"><span class="title">Home</span></a>
                 </li>
                 <li>
                     <a href="/public/listing"><span class="title">Listing Buy</span></a>
