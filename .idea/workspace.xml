@@ -246,13 +246,6 @@
       <change afterPath="$PROJECT_DIR$/../gia_su/resources/views/pages/contact.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gia_su/resources/views/pages/home_content.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gia_su/resources/views/pages/registration.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/InformationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/InformationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Author/InformationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Author/InformationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Information.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Information.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/author/information/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/author/information/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/author/information/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/author/information/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -268,17 +261,17 @@
     <session id="-1691494607">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="78" />
+          <entry key="project.closed" value="79" />
           <entry key="project.open.time.0" value="6" />
           <entry key="project.open.time.1" value="16" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="11" />
           <entry key="project.open.time.5" value="16" />
           <entry key="project.open.time.6" value="21" />
           <entry key="project.open.time.7" value="6" />
-          <entry key="project.opened" value="79" />
+          <entry key="project.opened" value="80" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -318,7 +311,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -644,16 +637,17 @@
       <workItem from="1597044893525" duration="1965000" />
       <workItem from="1597047544962" duration="1656000" />
       <workItem from="1597050244788" duration="1158000" />
+      <workItem from="1597052094239" duration="241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81989000" />
+    <option name="totallyTimeSpent" value="82230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3383405" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34334764" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -668,7 +662,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22409639" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.22409639" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
