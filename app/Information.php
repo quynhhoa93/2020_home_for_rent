@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Information extends Model
 {
-    //
+    public function TypeAsset(){
+        return $this->belongsTo('App\TypeAsset','id_type');
+    }
 }

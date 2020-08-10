@@ -21,6 +21,7 @@ class CreateInformationTable extends Migration
             $table->string('address');
             $table->text('description');
             $table->tinyInteger('status');
+            $table->tinyInteger('is_approve')->default(0);
             $table->string('image');
             $table->string('price');
             $table->timestamps();

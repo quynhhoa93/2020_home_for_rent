@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Author;
 
-use App\TypeAsset;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class TypeAssetController extends Controller
+class InformationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class TypeAssetController extends Controller
      */
     public function index()
     {
-        $typeAssets = TypeAsset::all();
-        return view('admin.pages.type_asset.index',compact('typeAssets'));
+        //
     }
 
     /**
@@ -26,7 +24,7 @@ class TypeAssetController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.type_asset.create');
+        //
     }
 
     /**
@@ -37,11 +35,7 @@ class TypeAssetController extends Controller
      */
     public function store(Request $request)
     {
-        $typeAsset = new TypeAsset();
-        $typeAsset->name = $request->name;
-        $typeAsset->save();
-        toastr()->success('đã thêm thành công một loại tài sản');
-        return redirect()->route('admin.type-asset.index');
+        //
     }
 
     /**
@@ -63,9 +57,7 @@ class TypeAssetController extends Controller
      */
     public function edit($id)
     {
-        $typeAsset = TypeAsset::find($id);
-        return view('admin.pages.type_asset.edit',compact('typeAsset'));
-
+        //
     }
 
     /**
@@ -77,11 +69,7 @@ class TypeAssetController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $typeAsset = TypeAsset::find($id);
-        $typeAsset->name = $request->name;
-        $typeAsset->save();
-        toastr()->success('đã sửa thành công một loại tài sản');
-        return redirect()->route('admin.type-asset.index');
+        //
     }
 
     /**
@@ -92,9 +80,6 @@ class TypeAssetController extends Controller
      */
     public function destroy($id)
     {
-        $typeAsset = TypeAsset::find($id);
-        $typeAsset->delete();
-        toastr()->warning('đã xoá một loại tài sản');
-        return redirect()->back();
+        //
     }
 }

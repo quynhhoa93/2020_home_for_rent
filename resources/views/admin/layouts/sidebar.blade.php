@@ -12,13 +12,17 @@
             <li class="{{ Request::is('admin/blogs') ? 'active' : '' }}"><a href="{{route('admin.blogs.index')}}"><i class="icon icon-home"></i> <span>bài viết blog</span></a></li>
 
             <li class="{{ Request::is('admin/pending/blogs') ? 'active' : '' }}"><a href="{{route('admin.blog.pending')}}"><i class="icon icon-home"></i> <span>bài viết blog chờ phê duyệt</span></a></li>
+
+            <li class="{{ Request::is('admin/type-asset') ? 'active' : '' }}"><a href="{{route('admin.type-asset.index')}}"><i class="icon icon-list"></i> <span>loại tài sản</span></a></li>
+
+            <li class="{{ Request::is('admin/information') ? 'active' : '' }}"><a href="{{route('admin.information.index')}}"><i class="icon icon-list"></i> <span>thông tin mua/thuê nhà đất</span></a></li>
         @endif
 
 
         @if(Auth::user()->role->id === 2 )
             <li class="{{ Request::is('author/dashboard') ? 'active' : '' }}"><a href="{{route('author.dashboard')}}"><i class="icon icon-home"></i> <span>Dashboard</span></a></li>
 
-            <li class="{{ Request::is('author/blogs') ? 'active' : '' }}"><a href="{{route('author.blogs.index')}}"><i class="icon icon-home"></i> <span>Dashboard</span></a></li>
+            <li class="{{ Request::is('author/information') ? 'active' : '' }}"><a href="{{route('author.information.index')}}"><i class="icon icon-list"></i> <span>đăng ký mua/thuê nhà đất</span></a></li>
         @endif
     </ul>
 </div>

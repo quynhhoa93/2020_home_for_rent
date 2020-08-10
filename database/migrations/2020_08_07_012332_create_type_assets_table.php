@@ -15,6 +15,7 @@ class CreateTypeAssetsTable extends Migration
     {
         Schema::create('type_assets', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
             $table->timestamps();
         });
     }
