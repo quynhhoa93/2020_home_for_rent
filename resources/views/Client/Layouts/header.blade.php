@@ -1,4 +1,4 @@
-<header class="header-nav menu_style_home_one style2 navbar-scrolltofixed stricky main-menu">
+<header class="header-nav menu_style_home_one {{ $title== "Home" ? '' : 'style2' }} navbar-scrolltofixed stricky main-menu">
     <div class="container-fluid p0">
         <!-- Ace Responsive Menu -->
         <nav>

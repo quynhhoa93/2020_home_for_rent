@@ -1,4 +1,4 @@
-@extends('client.layouts.app')
+@extends('client.layouts.app',,['title'=>'Information'])
 @section('content')
 	<!-- Main Header Nav -->
 	<header class="header-nav menu_style_home_one style2 navbar-scrolltofixed stricky main-menu">

@@ -16,7 +16,10 @@ class BlogController extends Controller
 
     public function detail($id)
     {
+        // echo $id;die;
         $blog = Blog::findOrFail($id);
         return view('client.blog.detail', compact('blog'));
     }
+
+
 }

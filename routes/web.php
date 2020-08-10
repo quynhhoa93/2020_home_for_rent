@@ -13,38 +13,45 @@
 // Client
 Route::group(['namespace' => 'Client'], function () {
     Route::get('','ClientController@index');
-
     Route::get('contact','ClientController@contact');
 
-    Route::get('login','LoginController@ShowLoginForm');
+    Route::group(['prefix' => 'login' ], function () {
+        Route::get('','LoginController@ShowLoginForm');
+    });
 
+    Route::group(['prefix' => 'register'], function () {
+        Route::get('',"RegisterController@index");
+        Route::post('signup','RegisterController@signup');
+    });
     Route::get('listing',"ClientController@listing");
+    Route::get('listing/search','ClientController@search');
 
     Route::group(['prefix' => 'blog'], function () {
         Route::get('','BlogController@index');
         Route::get('/{detail}','BlogController@detail');
     });
-
-// Admin
-// Route::get('/', function () {
-//     return view('admin.layouts.master');
-// });
-
+});
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::get('/dang-nhap','IndexController@getLogin')->name('getLogin');
 
+// Route::group(['prefix'=>'/admin','namespace'=>'Admin','as'=>'admin.','middleware'=>['auth','admin']],function (){
+//     Route::get('/dashboard','DashboardController@getDashboard')->name('dashboard');
 
-    Route::resource('/category','CategoryController');
-    Route::resource('/blogs','BlogController');
+//     Route::resource('/category','CategoryController');
+//     Route::resource('/blogs','BlogController');
 
-    //contact
-    Route::get('/contact','ContactController@index')->name('getContact');
-    Route::get('/single-contact/{id}','ContactController@singleContact')->name('singleContact');
-    Route::delete('/delete-contact/{id}','ContactController@deleteContact')->name('deleteContact');
-});
+//     //contact
+//     Route::get('/contact','ContactController@index')->name('getContact');
+//     Route::get('/single-contact/{id}','ContactController@singleContact')->name('singleContact');
+//     Route::delete('/delete-contact/{id}','ContactController@deleteContact')->name('deleteContact');
+
+//     //phe duyet bai viet tu author
+//     Route::get('/pending/blogs','BlogController@pending')->name('blog.pending');
+//     Route::put('/blog/{id}/approve','BlogController@approve')->name('blog.approve');
+// });
 
 //     //contact
 //     Route::get('/contact','ContactController@index');
@@ -52,7 +59,8 @@ Route::group(['namespace' => 'Client'], function () {
 //     Route::delete('/delete-contact/{id}','ContactController@deleteContact')->name('deleteContact');
 // });
 
-
 // Route::group(['prefix'=>'/author','namespace'=>'Author','as'=>'author.','middleware'=>['auth','author']],function () {
 //     Route::get('/dashboard','DashboardController@getDashboard')->name('dashboard');
+
+//     Route::resource('blogs','BlogController');
 // });

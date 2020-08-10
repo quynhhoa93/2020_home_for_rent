@@ -1,4 +1,4 @@
-@extends('client.layouts.app')
+@extends('client.layouts.app',['title'=>'Login'])
 @section('content')
 <!-- Inner Page Breadcrumb -->
 	<section class="inner_page_breadcrumb">
@@ -23,10 +23,13 @@
 			<div class="row">
 				<div class="col-sm-12 col-lg-6 offset-lg-3">
 					<div class="login_form inner_page">
+                        @if (Session::has('thanhcong'))
+                            <div class='alert alert-success'>{{ Session::get('thanhcong') }}</div>
+                            @endif
 						<form action="#">
 							<div class="heading">
 								<h3 class="text-center">Login to your account</h3>
-								<p class="text-center">Don't have an account? <a class="text-thm" href="page-register.html">Sign Up!</a></p>
+								<p class="text-center">Don't have an account? <a class="text-thm" href="/register">Sign Up!</a></p>
 							</div>
 							 <div class="form-group">
 						    	<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">

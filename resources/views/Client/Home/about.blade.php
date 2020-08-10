@@ -1,4 +1,4 @@
-@extends('client.layouts.app')
+@extends('client.layouts.app',,['title'=>'About'])
 @section('content')
 	<!-- Inner Page Breadcrumb -->
 	<section class="inner_page_breadcrumb">

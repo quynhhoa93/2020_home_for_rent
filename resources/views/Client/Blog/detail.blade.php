@@ -1,4 +1,4 @@
-@extends('client.layouts.app')
+@extends('client.layouts.app',['title'=> 'Blog'])
 @section('content')
 	<!-- Blog Single Post -->
 	<section class="blog_post_container bgc-f7 pb30">
