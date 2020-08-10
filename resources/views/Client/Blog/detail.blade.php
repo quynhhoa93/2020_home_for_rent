@@ -21,7 +21,7 @@
 							<div class="blog_sp_tag"><a href="#">Construction</a></div>
 							<h3 class="blog_sp_title">{{ $blog->title }}</h3>
 							<ul class="blog_sp_post_meta">
-								<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+								<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 								<li class="list-inline-item"><a href="#">{{ $blog->user->name }}</a></li>
 								<li class="list-inline-item"><span class="flaticon-calendar"></span></li>
 								<li class="list-inline-item"><a href="#">January 16, 2020</a></li>
@@ -31,7 +31,7 @@
 								<li class="list-inline-item"><a href="#">15</a></li>
 							</ul>
 							<div class="thumb">
-								<img class="img-fluid" src="/assets/images/blog/bs1.jpg" alt="bs1.jpg">
+								<img class="img-fluid" src="assets/images/blog/bs1.jpg" alt="bs1.jpg">
 							</div>
 							<div class="details">
 								<p class="mb30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis et sem sed sollicitudin. Donec non odio neque. Aliquam hendrerit sollicitudin purus, quis rutrum mi accumsan nec. Quisque bibendum orci ac nibh facilisis, at malesuada orci congue. Nullam tempus sollicitudin cursus. Ut et adipiscing erat. Curabitur this is a text link libero tempus congue.</p>
@@ -87,7 +87,7 @@
 									<a class="write_review float-right fn-xsd" href="#">Write a Review</a>
 								</div>
 								<div class="mbp_first media">
-									<img src="/assets/images/testimonial/1.png" class="mr-3" alt="1.png">
+									<img src="assets/images/testimonial/1.png" class="mr-3" alt="1.png">
 									<div class="media-body">
 								    	<h4 class="sub_title mt-0">Diana Cooper
 											<span class="sspd_review">
@@ -107,7 +107,7 @@
 								</div>
 								<div class="custom_hr"></div>
 								<div class="mbp_first media">
-									<img src="/assets/images/testimonial/2.png" class="mr-3" alt="2.png">
+									<img src="assets/images/testimonial/2.png" class="mr-3" alt="2.png">
 									<div class="media-body">
 								    	<h4 class="sub_title mt-0">Ali Tufan
 											<span class="sspd_review">
@@ -161,7 +161,7 @@
 						<div class="col-md-6 col-lg-6">
 							<div class="for_blog feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/blog/1.jpg" alt="1.jpg">
+									<img class="img-whp" src="assets/images/blog/1.jpg" alt="1.jpg">
 									<div class="tag">Construction</div>
 								</div>
 								<div class="details">
@@ -175,7 +175,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
@@ -186,7 +186,7 @@
 						<div class="col-md-6 col-lg-6">
 							<div class="for_blog feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/blog/2.jpg" alt="2.jpg">
+									<img class="img-whp" src="assets/images/blog/2.jpg" alt="2.jpg">
 									<div class="tag">Construction</div>
 								</div>
 								<div class="details">
@@ -200,7 +200,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
@@ -236,7 +236,7 @@
 					<div class="sidebar_feature_listing">
 						<h4 class="title">Featured Listings</h4>
 						<div class="media">
-							<img class="align-self-start mr-3" src="/assets/images/blog/fls1.jpg" alt="fls1.jpg">
+							<img class="align-self-start mr-3" src="assets/images/blog/fls1.jpg" alt="fls1.jpg">
 							<div class="media-body">
 						    	<h5 class="mt-0 post_title">Nice Room With View</h5>
 						    	<a href="#">$13,000/<small>/mo</small></a>
@@ -248,7 +248,7 @@
 							</div>
 						</div>
 						<div class="media">
-							<img class="align-self-start mr-3" src="/assets/images/blog/fls2.jpg" alt="fls2.jpg">
+							<img class="align-self-start mr-3" src="assets/images/blog/fls2.jpg" alt="fls2.jpg">
 							<div class="media-body">
 						    	<h5 class="mt-0 post_title">Villa called Archangel</h5>
 						    	<a href="#">$13,000<small>/mo</small></a>
@@ -260,7 +260,7 @@
 							</div>
 						</div>
 						<div class="media">
-							<img class="align-self-start mr-3" src="/assets/images/blog/fls3.jpg" alt="fls3.jpg">
+							<img class="align-self-start mr-3" src="assets/images/blog/fls3.jpg" alt="fls3.jpg">
 							<div class="media-body">
 						    	<h5 class="mt-0 post_title">Sunset Studio</h5>
 						    	<a href="#">$13,000<small>/mo</small></a>

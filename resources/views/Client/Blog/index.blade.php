@@ -1,4 +1,4 @@
-@extends('client.layouts.app')
+@extends('client.layouts.app',['title'=>'Blog'])
 @section('content')
     <!-- Main Blog Post Content -->
 	<section class="blog_post_container bgc-f7">
@@ -20,7 +20,7 @@
 					<div class="main_blog_post_content">
 						<div class="for_blog feat_property">
 							<div class="thumb">
-								<img class="img-whp" src="/assets/images/blog/7.jpg" alt="7.jpg">
+								<img class="img-whp" src="assets/images/blog/7.jpg" alt="7.jpg">
 								<div class="blog_tag">Construction</div>
 							</div>
 							<div class="details">
@@ -30,7 +30,7 @@
 								</div>
 								<div class="fp_footer">
 									<ul class="fp_meta float-left mb0">
-										<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+										<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 										<li class="list-inline-item"><a href="#">{{ $item->user->name }}</a></li>
 										<li class="list-inline-item"><a href="#"><span class="flaticon-calendar pr10"></span> {{ $item->created_at }}</a></li>
 									</ul>
@@ -89,7 +89,7 @@
 					<div class="sidebar_feature_listing">
 						<h4 class="title">Featured Listings</h4>
 						<div class="media">
-							<img class="align-self-start mr-3" src="/assets/images/blog/fls1.jpg" alt="fls1.jpg">
+							<img class="align-self-start mr-3" src="assets/images/blog/fls1.jpg" alt="fls1.jpg">
 							<div class="media-body">
 						    	<h5 class="mt-0 post_title">Nice Room With View</h5>
 						    	<a href="#">$13,000/<small>/mo</small></a>
@@ -101,7 +101,7 @@
 							</div>
 						</div>
 						<div class="media">
-							<img class="align-self-start mr-3" src="/assets/images/blog/fls2.jpg" alt="fls2.jpg">
+							<img class="align-self-start mr-3" src="assets/images/blog/fls2.jpg" alt="fls2.jpg">
 							<div class="media-body">
 						    	<h5 class="mt-0 post_title">Villa called Archangel</h5>
 						    	<a href="#">$13,000<small>/mo</small></a>
@@ -113,7 +113,7 @@
 							</div>
 						</div>
 						<div class="media">
-							<img class="align-self-start mr-3" src="/assets/images/blog/fls3.jpg" alt="fls3.jpg">
+							<img class="align-self-start mr-3" src="assets/images/blog/fls3.jpg" alt="fls3.jpg">
 							<div class="media-body">
 						    	<h5 class="mt-0 post_title">Sunset Studio</h5>
 						    	<a href="#">$13,000<small>/mo</small></a>

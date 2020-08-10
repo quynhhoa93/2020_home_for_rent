@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('image')->default('default.png');
             $table->text('about')->nullable();
+            $table->string('phone',20);
             $table->rememberToken();
             $table->timestamps();
         });

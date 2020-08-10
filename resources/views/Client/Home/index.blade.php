@@ -538,7 +538,7 @@
 					    		<p>to discover more</p>
 			        		</div>
 			        		<div class="thumb">
-			        			<img src="/assets/images/resource/mouse.png" alt="mouse.png">
+			        			<img src="assets/images/resource/mouse.png" alt="mouse.png">
 			        		</div>
 				    	</div>
 				    </a>
@@ -558,7 +558,7 @@
 						<div class="item">
 							<div class="feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/property/fp1.jpg" alt="fp1.jpg">
+									<img class="img-whp" src="assets/images/property/fp1.jpg" alt="fp1.jpg">
 									<div class="thmb_cntnt">
 										<ul class="tag mb0">
 											<li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -584,7 +584,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<div class="fp_pdate float-right">4 years ago</div>
@@ -595,7 +595,7 @@
 						<div class="item">
 							<div class="feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/property/fp2.jpg" alt="fp2.jpg">
+									<img class="img-whp" src="assets/images/property/fp2.jpg" alt="fp2.jpg">
 									<div class="thmb_cntnt">
 										<ul class="tag mb0">
 											<li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -620,7 +620,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<div class="fp_pdate float-right">4 years ago</div>
@@ -631,7 +631,7 @@
 						<div class="item">
 							<div class="feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/property/fp3.jpg" alt="fp3.jpg">
+									<img class="img-whp" src="assets/images/property/fp3.jpg" alt="fp3.jpg">
 									<div class="thmb_cntnt">
 										<ul class="tag mb0">
 											<li class="list-inline-item"><a href="#">For Sale</a></li>
@@ -656,7 +656,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<div class="fp_pdate float-right">4 years ago</div>
@@ -667,7 +667,7 @@
 						<div class="item">
 							<div class="feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/property/fp1.jpg" alt="fp1.jpg">
+									<img class="img-whp" src="assets/images/property/fp1.jpg" alt="fp1.jpg">
 									<div class="thmb_cntnt">
 										<ul class="tag mb0">
 											<li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -693,7 +693,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<div class="fp_pdate float-right">4 years ago</div>
@@ -704,7 +704,7 @@
 						<div class="item">
 							<div class="feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/property/fp2.jpg" alt="fp2.jpg">
+									<img class="img-whp" src="assets/images/property/fp2.jpg" alt="fp2.jpg">
 									<div class="thmb_cntnt">
 										<ul class="tag mb0">
 											<li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -729,7 +729,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<div class="fp_pdate float-right">4 years ago</div>
@@ -740,7 +740,7 @@
 						<div class="item">
 							<div class="feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/property/fp3.jpg" alt="fp3.jpg">
+									<img class="img-whp" src="assets/images/property/fp3.jpg" alt="fp3.jpg">
 									<div class="thmb_cntnt">
 										<ul class="tag mb0">
 											<li class="list-inline-item"><a href="#">For Sale</a></li>
@@ -765,7 +765,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<div class="fp_pdate float-right">4 years ago</div>
@@ -776,7 +776,7 @@
 						<div class="item">
 							<div class="feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/property/fp1.jpg" alt="fp1.jpg">
+									<img class="img-whp" src="assets/images/property/fp1.jpg" alt="fp1.jpg">
 									<div class="thmb_cntnt">
 										<ul class="tag mb0">
 											<li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -802,7 +802,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<div class="fp_pdate float-right">4 years ago</div>
@@ -813,7 +813,7 @@
 						<div class="item">
 							<div class="feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/property/fp2.jpg" alt="fp2.jpg">
+									<img class="img-whp" src="assets/images/property/fp2.jpg" alt="fp2.jpg">
 									<div class="thmb_cntnt">
 										<ul class="tag mb0">
 											<li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -838,7 +838,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<div class="fp_pdate float-right">4 years ago</div>
@@ -849,7 +849,7 @@
 						<div class="item">
 							<div class="feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/property/fp3.jpg" alt="fp3.jpg">
+									<img class="img-whp" src="assets/images/property/fp3.jpg" alt="fp3.jpg">
 									<div class="thmb_cntnt">
 										<ul class="tag mb0">
 											<li class="list-inline-item"><a href="#">For Sale</a></li>
@@ -874,7 +874,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<div class="fp_pdate float-right">4 years ago</div>
@@ -885,7 +885,7 @@
 						<div class="item">
 							<div class="feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/property/fp1.jpg" alt="fp1.jpg">
+									<img class="img-whp" src="assets/images/property/fp1.jpg" alt="fp1.jpg">
 									<div class="thmb_cntnt">
 										<ul class="tag mb0">
 											<li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -911,7 +911,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<div class="fp_pdate float-right">4 years ago</div>
@@ -922,7 +922,7 @@
 						<div class="item">
 							<div class="feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/property/fp2.jpg" alt="fp2.jpg">
+									<img class="img-whp" src="assets/images/property/fp2.jpg" alt="fp2.jpg">
 									<div class="thmb_cntnt">
 										<ul class="tag mb0">
 											<li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -947,7 +947,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<div class="fp_pdate float-right">4 years ago</div>
@@ -958,7 +958,7 @@
 						<div class="item">
 							<div class="feat_property">
 								<div class="thumb">
-									<img class="img-whp" src="/assets/images/property/fp3.jpg" alt="fp3.jpg">
+									<img class="img-whp" src="assets/images/property/fp3.jpg" alt="fp3.jpg">
 									<div class="thmb_cntnt">
 										<ul class="tag mb0">
 											<li class="list-inline-item"><a href="#">For Sale</a></li>
@@ -983,7 +983,7 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
 										<div class="fp_pdate float-right">4 years ago</div>
@@ -1011,7 +1011,7 @@
 			<div class="row">
 				<div class="col-lg-4 col-xl-4">
 					<div class="properti_city">
-						<div class="thumb"><img class="img-fluid w100" src="/assets/images/property/pc1.jpg" alt="pc1.jpg"></div>
+						<div class="thumb"><img class="img-fluid w100" src="assets/images/property/pc1.jpg" alt="pc1.jpg"></div>
 						<div class="overlay">
 							<div class="details">
 								<h4>Miami</h4>
@@ -1022,7 +1022,7 @@
 				</div>
 				<div class="col-lg-8 col-xl-8">
 					<div class="properti_city">
-						<div class="thumb"><img class="img-fluid w100" src="/assets/images/property/pc2.jpg" alt="pc2.jpg"></div>
+						<div class="thumb"><img class="img-fluid w100" src="assets/images/property/pc2.jpg" alt="pc2.jpg"></div>
 						<div class="overlay">
 							<div class="details">
 								<h4>Los Angeles</h4>
@@ -1033,7 +1033,7 @@
 				</div>
 				<div class="col-lg-8 col-xl-8">
 					<div class="properti_city">
-						<div class="thumb"><img class="img-fluid w100" src="/assets/images/property/pc3.jpg" alt="pc3.jpg"></div>
+						<div class="thumb"><img class="img-fluid w100" src="assets/images/property/pc3.jpg" alt="pc3.jpg"></div>
 						<div class="overlay">
 							<div class="details">
 								<h4>New York</h4>
@@ -1044,7 +1044,7 @@
 				</div>
 				<div class="col-lg-4 col-xl-4">
 					<div class="properti_city">
-						<div class="thumb"><img class="img-fluid w100" src="/assets/images/property/pc4.jpg" alt="pc4.jpg"></div>
+						<div class="thumb"><img class="img-fluid w100" src="assets/images/property/pc4.jpg" alt="pc4.jpg"></div>
 						<div class="overlay">
 							<div class="details">
 								<h4>Florida</h4>
@@ -1123,7 +1123,7 @@
 						<div class="item">
 							<div class="testimonial_grid">
 								<div class="thumb">
-									<img src="/assets/images/testimonial/1.jpg" alt="1.jpg">
+									<img src="assets/images/testimonial/1.jpg" alt="1.jpg">
 								</div>
 								<div class="details">
 									<h4>Augusta Silva</h4>
@@ -1135,7 +1135,7 @@
 						<div class="item">
 							<div class="testimonial_grid">
 								<div class="thumb">
-									<img src="/assets/images/testimonial/1.jpg" alt="1.jpg">
+									<img src="assets/images/testimonial/1.jpg" alt="1.jpg">
 								</div>
 								<div class="details">
 									<h4>Augusta Silva</h4>
@@ -1147,7 +1147,7 @@
 						<div class="item">
 							<div class="testimonial_grid">
 								<div class="thumb">
-									<img src="/assets/images/testimonial/1.jpg" alt="1.jpg">
+									<img src="assets/images/testimonial/1.jpg" alt="1.jpg">
 								</div>
 								<div class="details">
 									<h4>Augusta Silva</h4>
@@ -1159,7 +1159,7 @@
 						<div class="item">
 							<div class="testimonial_grid">
 								<div class="thumb">
-									<img src="/assets/images/testimonial/1.jpg" alt="1.jpg">
+									<img src="assets/images/testimonial/1.jpg" alt="1.jpg">
 								</div>
 								<div class="details">
 									<h4>Augusta Silva</h4>
@@ -1171,7 +1171,7 @@
 						<div class="item">
 							<div class="testimonial_grid">
 								<div class="thumb">
-									<img src="/assets/images/testimonial/1.jpg" alt="1.jpg">
+									<img src="assets/images/testimonial/1.jpg" alt="1.jpg">
 								</div>
 								<div class="details">
 									<h4>Augusta Silva</h4>
@@ -1201,7 +1201,7 @@
 				<div class="col-md-6 col-lg-4 col-xl-4">
 					<div class="for_blog feat_property">
 						<div class="thumb">
-							<img class="img-whp" src="/assets/images/blog/bh1.jpg" alt="bh1.jpg">
+							<img class="img-whp" src="assets/images/blog/bh1.jpg" alt="bh1.jpg">
 						</div>
 						<div class="details">
 							<div class="tc_content">
@@ -1210,7 +1210,7 @@
 							</div>
 							<div class="fp_footer">
 								<ul class="fp_meta float-left mb0">
-									<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+									<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 									<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 								</ul>
 								<a class="fp_pdate float-right" href="#">7 August 2019</a>
@@ -1221,7 +1221,7 @@
 				<div class="col-md-6 col-lg-4 col-xl-4">
 					<div class="for_blog feat_property">
 						<div class="thumb">
-							<img class="img-whp" src="/assets/images/blog/bh2.jpg" alt="bh2.jpg">
+							<img class="img-whp" src="assets/images/blog/bh2.jpg" alt="bh2.jpg">
 						</div>
 						<div class="details">
 							<div class="tc_content">
@@ -1230,7 +1230,7 @@
 							</div>
 							<div class="fp_footer">
 								<ul class="fp_meta float-left mb0">
-									<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+									<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 									<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 								</ul>
 								<a class="fp_pdate float-right" href="#">7 August 2019</a>
@@ -1241,7 +1241,7 @@
 				<div class="col-md-6 col-lg-4 col-xl-4">
 					<div class="for_blog feat_property">
 						<div class="thumb">
-							<img class="img-whp" src="/assets/images/blog/bh3.jpg" alt="bh3.jpg">
+							<img class="img-whp" src="assets/images/blog/bh3.jpg" alt="bh3.jpg">
 						</div>
 						<div class="details">
 							<div class="tc_content">
@@ -1250,7 +1250,7 @@
 							</div>
 							<div class="fp_footer">
 								<ul class="fp_meta float-left mb0">
-									<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
+									<li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 									<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 								</ul>
 								<a class="fp_pdate float-right" href="#">7 August 2019</a>
@@ -1276,27 +1276,27 @@
 			<div class="row">
 				<div class="col-sm-6 col-md-4 col-lg">
 					<div class="our_partner">
-						<img class="img-fluid" src="/assets/images/partners/1.png" alt="1.png">
+						<img class="img-fluid" src="assets/images/partners/1.png" alt="1.png">
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-4 col-lg">
 					<div class="our_partner">
-						<img class="img-fluid" src="/assets/images/partners/2.png" alt="2.png">
+						<img class="img-fluid" src="assets/images/partners/2.png" alt="2.png">
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-4 col-lg">
 					<div class="our_partner">
-						<img class="img-fluid" src="/assets/images/partners/3.png" alt="3.png">
+						<img class="img-fluid" src="assets/images/partners/3.png" alt="3.png">
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-4 col-lg">
 					<div class="our_partner">
-						<img class="img-fluid" src="/assets/images/partners/4.png" alt="4.png">
+						<img class="img-fluid" src="assets/images/partners/4.png" alt="4.png">
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-4 col-lg">
 					<div class="our_partner">
-						<img class="img-fluid" src="/assets/images/partners/5.png" alt="5.png">
+						<img class="img-fluid" src="assets/images/partners/5.png" alt="5.png">
 					</div>
 				</div>
 			</div>
