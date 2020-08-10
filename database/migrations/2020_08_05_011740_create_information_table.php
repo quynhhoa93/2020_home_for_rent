@@ -24,6 +24,7 @@ class CreateInformationTable extends Migration
             $table->tinyInteger('is_approve')->default(0);
             $table->string('image');
             $table->string('price');
+            $table->string('slug');
             $table->timestamps();
         });
     }

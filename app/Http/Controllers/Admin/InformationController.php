@@ -76,6 +76,8 @@ class InformationController extends Controller
                 $information->image = $filename;
             }
         }
+
+        dd($information);
     }
 
     /**

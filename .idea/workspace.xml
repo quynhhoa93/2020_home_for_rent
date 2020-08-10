@@ -246,6 +246,10 @@
       <change afterPath="$PROJECT_DIR$/../gia_su/resources/views/pages/contact.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gia_su/resources/views/pages/home_content.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gia_su/resources/views/pages/registration.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/InformationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/InformationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_05_011740_create_information_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_05_011740_create_information_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -279,7 +283,7 @@
           <entry key="example" value="1" />
           <entry key="html" value="10" />
           <entry key="jpg" value="3" />
-          <entry key="php" value="318" />
+          <entry key="php" value="325" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -288,14 +292,14 @@
           <entry key="Blade" value="128" />
           <entry key="HTML" value="10" />
           <entry key="Image" value="3" />
-          <entry key="PHP" value="190" />
+          <entry key="PHP" value="197" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="25" />
           <entry key="html" value="1" />
-          <entry key="php" value="6453" />
+          <entry key="php" value="6532" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -303,7 +307,7 @@
           <entry key=".env file" value="25" />
           <entry key="Blade" value="2075" />
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="4378" />
+          <entry key="PHP" value="4457" />
         </counts>
       </usages-collector>
     </session>
@@ -320,6 +324,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_05_011740_create_information_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_10_015821_create_images_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="19" column="69" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_06_203242_create_comments_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="17" column="53" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/information/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1425">
@@ -328,23 +359,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/InformationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="67" column="60" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
+            <state relative-caret-position="-14">
+              <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
               <folding>
                 <element signature="e#46#66#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/BlogController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -371,7 +393,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Middleware/AdminMiddleware.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/header.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" />
@@ -414,14 +435,15 @@
         <option value="$PROJECT_DIR$/resources/views/admin/pages/type_asset/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/type_asset/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/TypeAssetController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/dashboard.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_08_05_011740_create_information_table.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/information/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Tinhthanhpho.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/information/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/InformationController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_08_05_011740_create_information_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_08_10_015821_create_images_table.php" />
       </list>
     </option>
   </component>
@@ -600,6 +622,32 @@
             <path>
               <item name="2020_home_for_rent" type="b2602c69:ProjectViewProjectNode" />
               <item name="2020_home_for_rent" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2020_home_for_rent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2020_home_for_rent" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2020_home_for_rent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2020_home_for_rent" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2020_home_for_rent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2020_home_for_rent" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="information" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2020_home_for_rent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2020_home_for_rent" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -648,7 +696,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="InformationController&#9;FILE&#9;file:///Applications/MAMP/htdocs/php/2020_home_for_rent/app/Http/Controllers/Admin/InformationController.php&#10;we&#9;FILE&#9;file:///Applications/MAMP/htdocs/php/2020_home_for_rent/routes/web.php&#10;w&#9;FILE&#9;file:///Applications/MAMP/htdocs/php/2020_home_for_rent/routes/web.php&#10;web&#9;FILE&#9;file:///Applications/MAMP/htdocs/php/2020_home_for_rent/routes/web.php&#10;ContactController&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="we&#9;FILE&#9;file:///Applications/MAMP/htdocs/php/2020_home_for_rent/routes/web.php&#10;InformationController&#9;FILE&#9;file:///Applications/MAMP/htdocs/php/2020_home_for_rent/app/Http/Controllers/Admin/InformationController.php&#10;w&#9;FILE&#9;file:///Applications/MAMP/htdocs/php/2020_home_for_rent/routes/web.php&#10;web&#9;FILE&#9;file:///Applications/MAMP/htdocs/php/2020_home_for_rent/routes/web.php&#10;ContactController&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -744,17 +792,18 @@
       <workItem from="1596772679466" duration="1501000" />
       <workItem from="1596774495996" duration="1485000" />
       <workItem from="1597021657120" duration="1711000" />
-      <workItem from="1597023480650" duration="507000" />
+      <workItem from="1597023480650" duration="1310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64785000" />
+    <option name="totallyTimeSpent" value="65831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29041487" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29041487" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -769,7 +818,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22409639" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22409639" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -805,27 +854,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/author/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4650">
-          <caret line="310" column="8" selection-start-line="310" selection-start-column="8" selection-end-line="310" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/contacts/single_contact.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="31" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/categories/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -865,13 +893,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.env.example">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_05_083708_create_blogs_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/author/blogs/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -961,13 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_06_203242_create_comments_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/TypeAsset.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1048,13 +1062,6 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Author/InformationController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="57" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/blogs/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -1097,17 +1104,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_05_011740_create_information_table.php">
+    <entry file="file://$PROJECT_DIR$/public/backend/img/information/large.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        <state relative-caret-position="90">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/information/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/BlogController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="51" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="51" />
+        <state relative-caret-position="135">
+          <caret line="9" column="28" selection-start-line="9" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/InformationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+          <folding>
+            <element signature="e#46#66#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1118,20 +1142,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/BlogController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/information/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-end-line="10" />
+        <state relative-caret-position="195">
+          <caret line="13" column="51" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/InformationController.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_04_174224_create_categories_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_05_011740_create_information_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="67" column="60" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
-          <folding>
-            <element signature="e#46#66#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_05_083708_create_blogs_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_10_015821_create_images_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="80" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_06_203242_create_comments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="35" />
         </state>
       </provider>
     </entry>

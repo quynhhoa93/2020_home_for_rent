@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,7 +19,6 @@ Route::get('/', function () {
 //        Route::get('','BlogController@index');
 //        Route::get('/{detail}','BlogController@detail');
 //    });
-=======
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,7 +47,6 @@ Route::get('contact','ClientController@contact');
         Route::get('/{detail}','BlogController@detail');
     });
  });
->>>>>>> d389c0e593e9b1109c6ef4e5bb535b8b67853df1
 
 Auth::routes();
 
