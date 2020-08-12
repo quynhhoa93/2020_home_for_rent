@@ -26,6 +26,7 @@
                                 <thead>
                                 <tr>
                                     <th></th>
+                                    <th>người đăng</th>
                                     <th>tiêu đề</th>
                                     <th>địa chỉ</th>
                                     <th>chi tiết bài viết</th>
@@ -39,6 +40,11 @@
                                 @foreach($informations as $key=>$information)
                                     <tr>
                                         <td>{{++$key}}</td>
+                                        @if($information->user->id == 1)
+                                            <td style="color: green">{{$information->user->name}}</td>
+                                                @else
+                                            <td>{{$information->user->name}}</td>
+                                        @endif
                                         <td>{{$information->name}}</td>
                                         <td>{!! str_limit($information->address,30) !!}</td>
                                         <td>{!! str_limit($information->description,30) !!}</td>
@@ -58,6 +64,7 @@
 
                                         <td><img src="{{asset('backend/img/information/small/'.$information->image)}}" style="width: 100px"></td>
                                         <td class="center">
+                                            <br>
                                             <a href="{{route('admin.information.show',$information->id)}}" class="btn btn-success btn-mini">chi tiết</a>
                                             <a href="{{route('admin.information.edit',$information->id)}}" class="btn btn-warning btn-mini">Sửa</a>
                                             <button class="btn btn-danger btn-mini" type="button" onclick="deleteCategory({{$information->id}})"><i>xoá</i></button>
@@ -65,6 +72,9 @@
                                                 @csrf
                                                 @method('DELETE')
                                             </form>
+                                            <br>
+                                            <br>
+                                            <a href="{{route('admin.getInformationImages',$information->id)}}" class="btn btn-warning btn-mini">thêm ảnh mô tả</a>
                                         </td>
                                     </tr>
                                 @endforeach

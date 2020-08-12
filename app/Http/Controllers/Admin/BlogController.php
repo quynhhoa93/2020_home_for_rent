@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Blog;
+use App\Http\Requests\EditBlogPost;
+use App\Http\Requests\StoreBlogPost;
 use App\Notifications\AuthorPostApproved;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -41,7 +43,7 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreBlogPost $request)
     {
         $blog = new Blog();
         $blog->title = $request->title;
@@ -108,7 +110,7 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EditBlogPost $request, $id)
     {
         $blog = Blog::find($id);
         $blog->title = $request->title;

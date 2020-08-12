@@ -39,6 +39,9 @@
                                     <div class="controls">
                                         <input type="text" name="name" id="required" value="{{$information->name}}">
                                     </div>
+                                    <div class="controls">
+                                        <p class="help is-danger" style="color: #b91d19">{{ $errors->first('name') }}</p>
+                                    </div>
                                 </div>
 
                                 <div class="control-group">
@@ -58,12 +61,18 @@
                                     <div class="controls">
                                         <input type="text" name="address" id="required" value="{{$information->address}}">
                                     </div>
+                                    <div class="controls">
+                                        <p class="help is-danger" style="color: #b91d19">{{ $errors->first('address') }}</p>
+                                    </div>
                                 </div>
 
                                 <div class="control-group">
                                     <label class="control-label">chi tiết bài viết</label>
                                     <div class="controls">
                                         <textarea type="text" name="description" id="summary-ckeditor">{!! $information->description !!}</textarea>
+                                    </div>
+                                    <div class="controls">
+                                        <p class="help is-danger" style="color: #b91d19">{{ $errors->first('description') }}</p>
                                     </div>
                                 </div>
 
@@ -73,12 +82,18 @@
                                         <input style="margin: 0 22px;" type="file" name="image">
                                         <input type="hidden" name="current_image" value="{{$information->image}}">
                                     </div>
+                                    <div class="controls">
+                                        <p class="help is-danger" style="color: #b91d19">{{ $errors->first('image') }}</p>
+                                    </div>
                                 </div>
 
                                 <div class="control-group">
                                     <label class="control-label">giá mong muốn</label>
                                     <div class="controls">
                                         <input type="number" name="price" id="required" value="{{$information->price}}">
+                                    </div>
+                                    <div class="controls">
+                                        <p class="help is-danger" style="color: #b91d19">{{ $errors->first('price') }}</p>
                                     </div>
                                 </div>
 

@@ -22,7 +22,7 @@
                             <h5>Static table</h5>
                         </div>
                         <div class="widget-content nopadding">
-                            <table class="table table-bordered table-striped" id="table_id">
+                            <table class="table table-bordered table-striped" id="table_id" >
                                 <thead>
                                 <tr>
                                     <th></th>
@@ -53,7 +53,7 @@
                                             @if($information->is_approve == 1)
                                                 <button type="button" class="btn btn-success btn-mini ">
                                                     <span>đã được phê duyệt</span>
-                                                </button>
+                                                </button>l
                                             @else
                                                 <button type="button" class="btn btn-danger btn-mini" onclick="approvePost({{ $information->id }})">
                                                     <span>chua được phê duyệt</span>

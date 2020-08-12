@@ -28,12 +28,18 @@
                                     <div class="controls">
                                         <input type="text" name="title" id="required" value="{{$blog->title}}">
                                     </div>
+                                    <div class="controls">
+                                        <p class="help is-danger" style="color: #b91d19">{{ $errors->first('title') }}</p>
+                                    </div>
                                 </div>
 
                                 <div class="control-group">
                                     <label class="control-label">chi tiết bài viết</label>
                                     <div class="controls">
                                         <textarea type="text" name="body" id="summary-ckeditor">{!! $blog->body !!}</textarea>
+                                    </div>
+                                    <div class="controls">
+                                        <p class="help is-danger" style="color: #b91d19">{{ $errors->first('body') }}</p>
                                     </div>
                                 </div>
 
@@ -42,6 +48,9 @@
                                     <div class="control">
                                         <input style="margin: 0 22px;" type="file" name="image">
                                         <input type="hidden" name="current_image" value="{{$blog->image}}">
+                                    </div>
+                                    <div class="controls">
+                                        <p class="help is-danger" style="color: #b91d19">{{ $errors->first('image') }}</p>
                                     </div>
                                 </div>
 

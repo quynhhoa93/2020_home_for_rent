@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\EditInformationPost;
+use App\Http\Requests\IndexInformationPost;
 use App\Information;
 use App\Notifications\AuthorPostInformationApproved;
 use App\Tinhthanhpho;
 use App\TypeAsset;
+use App\Information_image;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -43,7 +46,7 @@ class InformationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(IndexInformationPost $request)
     {
 //        $data = $request->all();
 //        dd($data);
@@ -118,7 +121,7 @@ class InformationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EditInformationPost $request, $id)
     {
         $information = Information::find($id);
         $information->id_type = $request->type_id;
@@ -208,6 +211,55 @@ class InformationController extends Controller
         }else{
             toastr()->info('bai dang chua duoc cap quyen');
         }
+        return redirect()->back();
+    }
+
+    public function getAddImages($id){
+        $informationDetails = Information::find($id);
+        $informationImages = Information_image::where(['information_id'=>$id])->get();
+        return view('admin.pages.information.add_image',compact('informationDetails','informationImages'));
+    }
+
+    public function postAddImages(Request $request){
+        $data = $request->all();
+        if ($request->hasFile('image')){
+            $files = $request->file('image');
+            foreach ($files as $file){
+                $image = new Information_image();
+                $extension = $file->getClientOriginalExtension();
+                $file_name = rand(111,9999).'.'.$extension;
+                $large_image_path = 'backend/img/information_image/large/' . $file_name;
+                $medium_image_path = 'backend/img/information_image/medium/' . $file_name;
+                $small_image_path = 'backend/img/information_image/small/' . $file_name;
+
+                Image::make($file)->save($large_image_path);
+                Image::make($file)->resize(600, 600)->save($medium_image_path);
+                Image::make($file)->resize(300, 300)->save($small_image_path);
+
+                $image->image = $file_name;
+                $image->information_id = $data['information_id'];
+                $image->save();
+            }
+        }
+
+        toastr()->success('thêm thành công ảnh chi tiết cho bài viết');
+        return redirect()->back();
+    }
+
+    public function deleteAltImage($id){
+        $informationImage = Information_image::where(['id'=>$id])->first();
+        $large_image_path = 'backend/img/information_image/large/';
+        $medium_image_path = 'backend/img/information_image/medium/';
+        $small_image_path = 'backend/img/information_image/small/' ;
+
+        if (file_exists($large_image_path.$informationImage->image)){
+            unlink($large_image_path.$informationImage->image);
+            unlink($medium_image_path.$informationImage->image);
+            unlink($small_image_path.$informationImage->image);
+        }
+
+        $informationImage->delete();
+        toastr()->warning('xoá một ảnh chi tiết cho bài viết');
         return redirect()->back();
     }
 }

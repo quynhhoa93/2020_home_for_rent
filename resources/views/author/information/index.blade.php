@@ -65,6 +65,10 @@
                                                 @csrf
                                                 @method('DELETE')
                                             </form>
+
+                                            <br>
+                                            <br>
+                                            <a href="{{route('author.getInformationImages',$information->id)}}" class="btn btn-warning btn-mini">thêm ảnh mô tả</a>
                                         </td>
                                     </tr>
                                 @endforeach

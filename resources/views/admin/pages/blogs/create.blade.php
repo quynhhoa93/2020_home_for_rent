@@ -25,14 +25,20 @@
                                 <div class="control-group">
                                     <label class="control-label">tên bài viết</label>
                                     <div class="controls">
-                                        <input type="text" name="title" id="required">
+                                        <input type="text" name="title" id="required" value="{{old('title')}}">
+                                    </div>
+                                    <div class="controls">
+                                    <p class="help is-danger" style="color: #b91d19">{{ $errors->first('title') }}</p>
                                     </div>
                                 </div>
 
                                 <div class="control-group">
                                     <label class="control-label">chi tiết bài viết</label>
                                     <div class="controls">
-                                        <textarea type="text" name="body" id="summary-ckeditor"></textarea>
+                                        <textarea type="text" name="body" id="summary-ckeditor">{{old('body')}}</textarea>
+                                    </div>
+                                    <div class="controls">
+                                        <p class="help is-danger" style="color: #b91d19">{{ $errors->first('body') }}</p>
                                     </div>
                                 </div>
 
@@ -40,6 +46,9 @@
                                     <label class="control-label">ảnh bài viết </label>
                                     <div class="control">
                                         <input style="margin: 0 22px;" type="file" name="image">
+                                    </div>
+                                    <div class="controls">
+                                        <p class="help is-danger" style="color: #b91d19">{{ $errors->first('image') }}</p>
                                     </div>
                                 </div>
 

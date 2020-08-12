@@ -20,8 +20,7 @@ Route::group(['namespace' => 'Client'], function () {
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
-//
+
 Route::get('/dang-nhap','IndexController@getLogin')->name('getLogin');
 
 
@@ -46,6 +45,12 @@ Route::group(['prefix'=>'/admin','namespace'=>'Admin','as'=>'admin.','middleware
     //phe duyet mua ban tu author
     Route::get('/pending/information','InformationController@pending')->name('information.pending');
     Route::put('/information/{id}/approve','InformationController@approve')->name('information.approve');
+
+    //them anh cho mo ta cua bang information
+    Route::get('/add-images/{id}','InformationController@getAddImages')->name('getInformationImages');
+    Route::post('/add-images','InformationController@postAddImages')->name('postInformationImages');
+    Route::delete('/delete-alt-image/{id}','InformationController@deleteAltImage')->name('deleteAltImage');
+
 });
 
 
@@ -54,4 +59,9 @@ Route::group(['prefix'=>'/author','namespace'=>'Author','as'=>'author.','middlew
 
     Route::resource('blogs','BlogController');
     Route::resource('information','InformationController');
+
+    //them anh cho mo ta cua bang information
+    Route::get('/add-images/{id}','InformationController@getAddImages')->name('getInformationImages');
+    Route::post('/add-images','InformationController@postAddImages')->name('postInformationImages');
+    Route::delete('/delete-alt-image/{id}','InformationController@deleteAltImage')->name('deleteAltImage');
 });

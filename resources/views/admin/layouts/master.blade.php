@@ -15,6 +15,17 @@
     <link rel="stylesheet" href="{{asset('backend/css/select2.css')}}" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <style>
+        .dataTables_filter {
+            color: #878787;
+            font-size: 11px;
+            right: 0;
+            top: 37px;
+            margin: 4px 8px 2px 10px;
+            position: unset!important;
+            text-align: left;
+        }
+    </style>
     @toastr_css
     @stack('css')
 </head>
