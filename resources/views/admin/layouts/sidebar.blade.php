@@ -18,6 +18,11 @@
             <li class="{{ Request::is('admin/information') ? 'active' : '' }}"><a href="{{route('admin.information.index')}}"><i class="icon icon-list"></i> <span>thông tin mua/thuê nhà đất</span></a></li>
 
             <li class="{{ Request::is('admin/pending/information') ? 'active' : '' }}"><a href="{{route('admin.information.pending')}}"><i class="icon icon-home"></i> <span>bài viết mua/thuê nhà đất chờ phê duyệt</span></a></li>
+
+            <li class="{{ Request::is('admin/users') ? 'active' : '' }}"><a href="{{route('admin.users.index')}}"><i class="icon icon-list"></i> <span>thông tin tài khoản của tất cả user</span></a></li>
+
+            <li class="{{ Request::is('admin/admin-user') ? 'active' : '' }}"><a href="{{route('admin.getAdminUser')}}"><i class="icon icon-list"></i> <span>thông tin tài khoản</span></a></li>
+
             @endif
 
 
@@ -28,6 +33,8 @@
 
 
             <li class="{{ Request::is('author/information') ? 'active' : '' }}"><a href="{{route('author.information.index')}}"><i class="icon icon-list"></i> <span>đăng ký mua/thuê nhà đất</span></a></li>
+
+            <li class="{{ Request::is('author/users') ? 'active' : '' }}"><a href="{{route('author.users.index')}}"><i class="icon icon-list"></i> <span>thông tin tài khoản</span></a></li>
         @endif
     </ul>
 </div>

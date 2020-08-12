@@ -32,6 +32,12 @@ Route::group(['prefix'=>'/admin','namespace'=>'Admin','as'=>'admin.','middleware
     Route::resource('/information','InformationController');
 
     Route::resource('type-asset','TypeAssetController');
+    Route::resource('users','UsersController');
+
+    Route::get('/admin-user','UsersController@getAdminUser')->name('getAdminUser');
+    Route::get('/change-password','UsersController@editPassword')->name('editPassword');
+    Route::post('/change-password','UsersController@postEditPassword')->name('postEditPassword');
+
 
     //contact
     Route::get('/contact','ContactController@index')->name('getContact');
@@ -59,6 +65,11 @@ Route::group(['prefix'=>'/author','namespace'=>'Author','as'=>'author.','middlew
 
     Route::resource('blogs','BlogController');
     Route::resource('information','InformationController');
+    Route::resource('users','UsersController');
+
+    //doi mat khau
+    Route::get('/change-password','UsersController@editPassword')->name('editPassword');
+    Route::post('/change-password','UsersController@postEditPassword')->name('postEditPassword');
 
     //them anh cho mo ta cua bang information
     Route::get('/add-images/{id}','InformationController@getAddImages')->name('getInformationImages');
