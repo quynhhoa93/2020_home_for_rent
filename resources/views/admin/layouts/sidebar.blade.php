@@ -2,7 +2,6 @@
 <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
     <ul>
         @if(Auth::user()->role->id == 1)
-            <?php echo Auth::user()->role->id ?>
             <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}"><a href="{{route('admin.dashboard')}}"><i class="icon icon-home"></i> <span>Dashboard</span></a></li>
 
             <li class="{{ Request::is('admin/category') ? 'active' : '' }}"><a href="{{route('admin.category.index')}}"><i class="icon icon-th-list"></i> <span>tất cả danh mục</span></a></li>
@@ -17,7 +16,11 @@
 
             <li class="{{ Request::is('admin/information') ? 'active' : '' }}"><a href="{{route('admin.information.index')}}"><i class="icon icon-list"></i> <span>thông tin mua/thuê nhà đất</span></a></li>
 
-            <li class="{{ Request::is('admin/pending/information') ? 'active' : '' }}"><a href="{{route('admin.information.pending')}}"><i class="icon icon-home"></i> <span>bài viết mua/thuê nhà đất chờ phê duyệt</span></a></li>
+            <li class="{{ Request::is('admin/comment-blog') ? 'active' : '' }}"><a href="{{route('admin.comment-blog.index')}}"><i class="icon icon-list"></i> <span>bình luận blog</span></a></li>
+
+            <li class="{{ Request::is('admin/comment-information') ? 'active' : '' }}"><a href="{{route('admin.comment-information.index')}}"><i class="icon icon-list"></i> <span>bình luận mua bán nhà đất</span></a></li>
+
+             <li class="{{ Request::is('admin/pending/information') ? 'active' : '' }}"><a href="{{route('admin.information.pending')}}"><i class="icon icon-home"></i> <span>bài viết mua/thuê nhà đất chờ phê duyệt</span></a></li>
 
             <li class="{{ Request::is('admin/users') ? 'active' : '' }}"><a href="{{route('admin.users.index')}}"><i class="icon icon-list"></i> <span>thông tin tài khoản của tất cả user</span></a></li>
 

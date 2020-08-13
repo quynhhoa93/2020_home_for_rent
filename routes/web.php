@@ -33,6 +33,8 @@ Route::group(['prefix'=>'/admin','namespace'=>'Admin','as'=>'admin.','middleware
 
     Route::resource('type-asset','TypeAssetController');
     Route::resource('users','UsersController');
+    Route::resource('comment-blog','CommentBlogController');
+    Route::resource('comment-information','CommentInformationController');
 
     Route::get('/admin-user','UsersController@getAdminUser')->name('getAdminUser');
     Route::get('/change-password','UsersController@editPassword')->name('editPassword');
