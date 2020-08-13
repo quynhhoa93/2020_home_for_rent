@@ -26,7 +26,7 @@
                                 <thead>
                                 <tr>
                                     <th></th>
-                                    <th>người đăng</th>
+                                    {{--<th>người đăng</th>--}}
                                     <th>tiêu đề</th>
                                     <th>địa chỉ</th>
                                     <th>chi tiết bài viết</th>
@@ -40,11 +40,11 @@
                                 @foreach($informations as $key=>$information)
                                     <tr>
                                         <td>{{++$key}}</td>
-                                        @if($information->user->id == 1)
-                                            <td style="color: green">{{$information->user->name}}</td>
-                                                @else
-                                            <td>{{$information->user->name}}</td>
-                                        @endif
+                                        {{--@if($information->user_id==1)--}}
+                                            {{--<td style="color: green">{{$information->user->name}}</td>--}}
+                                                {{--@else--}}
+                                            {{--<td>{{$information->user->name}}</td>--}}
+                                        {{--@endif--}}
                                         <td>{{$information->name}}</td>
                                         <td>{!! str_limit($information->address,30) !!}</td>
                                         <td>{!! str_limit($information->description,30) !!}</td>
