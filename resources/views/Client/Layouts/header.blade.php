@@ -1,4 +1,6 @@
-<header class="header-nav menu_style_home_one {{ $title== "Home" ? '' : 'style2' }} navbar-scrolltofixed stricky main-menu">
+<header class="header-nav menu_style_home_one
+{{--{{ $title== "Home" ? '' : 'style2' }} --}}
+        navbar-scrolltofixed stricky main-menu">
     <div class="container-fluid p0">
         <!-- Ace Responsive Menu -->
         <nav>
@@ -52,13 +54,34 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/blog"><span class="title">Blog</span></a>
+                    <a href="{{route('client.blog')}}"><span class="title">Blog</span></a>
                 </li>
                 <li class="last">
                     <a href="/contact"><span class="title">Contact</span></a>
                 </li>
+
+                @guest
                 <li class="list-inline-item list_s"><a href="#" class="btn flaticon-user" data-toggle="modal" data-target=".bd-example-modal-lg"> <span class="dn-lg">Login/Register</span></a></li>
-                <li class="list-inline-item add_listing"><a href="page-add-new-property.html"><span class="flaticon-plus"></span><span class="dn-lg"> Create Listing</span></a></li>
+                @else
+                    <li>
+                        <span class="title">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                        </span>
+                    </li>
+                    @if(Auth::user()->role->id == 2)
+                        <li class="list-inline-item add_listing"><a href="page-add-new-property.html"><span class="flaticon-plus"></span><span class="dn-lg"> đăng tin mua/thuê nhà</span></a></li>
+                    @endif
+                    @if(Auth::user()->role->id == 1)
+                        <li class="list-inline-item add_listing"><a href="page-add-new-property.html"><span class="flaticon-plus"></span><span class="dn-lg"> Admin</span></a></li>
+                    @endif
+                @endguest
             </ul>
         </nav>
     </div>
@@ -92,7 +115,8 @@
                           </div>
                           <div class="col-lg-6 col-xl-6">
                             <div class="login_form">
-                                <form action="#">
+                                <form action="{{route('login')}}" method="POST">
+                                    @csrf
                                     <div class="heading">
                                         <h4>Login</h4>
                                     </div>
@@ -105,14 +129,14 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="input-group mb-2 mr-sm-2">
-                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="User Name Or Email">
+   aaa                                 <div class="input-group mb-2 mr-sm-2">
+                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Email" name="email">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="flaticon-user"></i></div>
                                         </div>
                                     </div>
                                     <div class="input-group form-group">
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="flaticon-password"></i></div>
                                         </div>

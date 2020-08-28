@@ -16,49 +16,52 @@
 			</div>
 			<div class="row">
                 @foreach ($blog as $item)
-                <div class="col-lg-8">
+					<div class="col-lg-8">
 					<div class="main_blog_post_content">
 						<div class="for_blog feat_property">
 							<div class="thumb">
-								<img class="img-whp" src="/assets/images/blog/7.jpg" alt="7.jpg">
+								<img class="img-whp" src="{{asset('backend/img/blog/small/'.$item->image)}}" style="height: 400px; width:728px" alt="7.jpg">
 								<div class="blog_tag">Construction</div>
 							</div>
 							<div class="details">
 								<div class="tc_content">
 									<h4 class="mb15">{{ $item->title }}</h4>
-									<p>{{ $item->body }}</p>
+									<p>{!! str_limit($item->body,'40') !!} </p>
 								</div>
 								<div class="fp_footer">
 									<ul class="fp_meta float-left mb0">
 										<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
-										<li class="list-inline-item"><a href="#">{{ $item->user->name }}</a></li>
+										<li class="list-inline-item"><a href="#">
+												{{ $item->user->id ?? '' }}
+												{{ $item->user->name ?? '' }}
+											</a></li>
 										<li class="list-inline-item"><a href="#"><span class="flaticon-calendar pr10"></span> {{ $item->created_at }}</a></li>
 									</ul>
-									<a class="fp_pdate float-right text-thm" href="/blog/{{$item->id}}">Read More <span class="flaticon-next"></span></a>
+									<a class="fp_pdate float-right text-thm" href="/blog/{{$item->id}}">Xem tiếp <span class="flaticon-next"></span></a>
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="mbp_pagination mt20">
-									<ul class="page_navigation">
-									    <li class="page-item disabled">
-									    	<a class="page-link" href="#" tabindex="-1" aria-disabled="true"> <span class="flaticon-left-arrow"></span> Prev</a>
-									    </li>
-									    <li class="page-item"><a class="page-link" href="#">1</a></li>
-									    <li class="page-item active" aria-current="page">
-									    	<a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-									    </li>
-									    <li class="page-item"><a class="page-link" href="#">3</a></li>
-									    <li class="page-item"><a class="page-link" href="#">...</a></li>
-									    <li class="page-item"><a class="page-link" href="#">29</a></li>
-									    <li class="page-item">
-									    	<a class="page-link" href="#"><span class="flaticon-right-arrow"></span></a>
-									    </li>
-									</ul>
-								</div>
-							</div>
-						</div>
+						{{--<div class="row">--}}
+							{{--<div class="col-lg-12">--}}
+								{{--<div class="mbp_pagination mt20">--}}
+									{{--<ul class="page_navigation">--}}
+									    {{--<li class="page-item disabled">--}}
+									    	{{--<a class="page-link" href="#" tabindex="-1" aria-disabled="true"> <span class="flaticon-left-arrow"></span> Prev</a>--}}
+									    {{--</li>--}}
+									    {{--<li class="page-item"><a class="page-link" href="#">1</a></li>--}}
+									    {{--<li class="page-item active" aria-current="page">--}}
+									    	{{--<a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>--}}
+									    {{--</li>--}}
+									    {{--<li class="page-item"><a class="page-link" href="#">3</a></li>--}}
+									    {{--<li class="page-item"><a class="page-link" href="#">...</a></li>--}}
+									    {{--<li class="page-item"><a class="page-link" href="#">29</a></li>--}}
+									    {{--<li class="page-item">--}}
+									    	{{--<a class="page-link" href="#"><span class="flaticon-right-arrow"></span></a>--}}
+									    {{--</li>--}}
+									{{--</ul>--}}
+								{{--</div>--}}
+							{{--</div>--}}
+						{{--</div>--}}
 					</div>
 				</div>
                 @endforeach

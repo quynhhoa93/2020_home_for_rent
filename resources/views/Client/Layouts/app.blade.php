@@ -13,7 +13,7 @@
 <!-- Responsive stylesheet -->
 <link rel="stylesheet" href="/assets/css/responsive.css">
 <!-- Title -->
-<title>{{ $title }}</title>
+    <title>@yield('title')</title>
 <!-- Favicon -->
 <link href="/assets/images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
 <link href="/assets/images/favicon.ico" sizes="128x128" rel="shortcut icon" />
@@ -23,6 +23,7 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://kit.fontawesome.com/8b988c9274.js" crossorigin="anonymous"></script>
     <![endif]-->
 </head>
 <body>

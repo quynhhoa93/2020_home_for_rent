@@ -9,8 +9,7 @@
 @section('content')
     <div id="content">
         <div id="content-header">
-            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Form elements</a> <a href="#" class="current">Validation</a> </div>
-            <h1>Form validation</h1>
+            <div id="breadcrumb"> <a href="{{route('admin.dashboard')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> trang chủ</a> <a href="{{route('admin.blogs.index')}}">blogs</a> <a href="{{route('admin.blogs.create')}}" class="current">tạo bài viết mới</a> </div>
         </div>
         <div class="container-fluid"><hr>
             <div class="row-fluid">
@@ -45,7 +44,7 @@
                                 <div class="control-group">
                                     <label class="control-label">ảnh bài viết </label>
                                     <div class="control">
-                                        <input style="margin: 0 22px;" type="file" name="image">
+                                        <input style="margin: 0 22px;" type="file" name="image" value="them anh" placeholder="sdhcgsndbmcns">
                                     </div>
                                     <div class="controls">
                                         <p class="help is-danger" style="color: #b91d19">{{ $errors->first('image') }}</p>

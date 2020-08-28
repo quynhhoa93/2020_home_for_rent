@@ -7,10 +7,12 @@
 @endpush
 
 @section('content')
+
+
+
     <div id="content">
         <div id="content-header">
-            <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">Tables</a> </div>
-            <h1>Tables</h1>
+            <div id="breadcrumb"> <a href="{{route('admin.dashboard')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> trang chủ</a> <a href="{{route('admin.blogs.index')}}" class="current">blogs</a> </div>
             <h1><a href="{{route('admin.blogs.create')}}" class="btn btn-success btn-large" >thêm bài viết mới</a> </h1>
         </div>
         <div class="container-fluid">
@@ -37,6 +39,7 @@
                                 </thead>
                                 <tbody>
                                 @foreach($blogs as $key=>$blog)
+
                                     <tr>
                                         <td>{{++$key}}</td>
                                         <td>{{$blog->title}}</td>
@@ -56,7 +59,7 @@
                                             <td style="color: green"> đã được phê duyệt </td>
                                             @endif
                                         <td>{{$blog->view_count}}</td>
-                                        
+
                                         <td><img src="{{asset('backend/img/blog/small/'.$blog->image)}}" style="width: 100px"></td>
                                         <td class="center">
                                             <a href="{{route('admin.blogs.show',$blog->id)}}" class="btn btn-success btn-mini">chi tiết</a>

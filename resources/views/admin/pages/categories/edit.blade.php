@@ -9,7 +9,7 @@
 @section('content')
     <div id="content">
         <div id="content-header">
-            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Form elements</a> <a href="#" class="current">Validation</a> </div>
+            <div id="breadcrumb"> <a href="{{route('admin.dashboard')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> trang chủ</a> <a href="{{route('admin.category.index')}}">danh mục</a> <a href="{{route('admin.category.edit',$category->id)}}" class="current">sửa danh mục</a> </div>
             <h1>Form validation</h1>
         </div>
         <div class="container-fluid"><hr>

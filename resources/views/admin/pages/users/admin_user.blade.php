@@ -8,6 +8,9 @@
 
 @section('content')
     <div id="content">
+        <div id="content-header">
+            <div id="breadcrumb"> <a href="{{route('admin.dashboard')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> trang chủ</a> <a href="{{route('admin.getAdminUser')}}" class="current">thông tin tài khoản</a> </div>
+        </div>
 
         <div class="container-fluid">
             <hr>

@@ -9,8 +9,8 @@
 @section('content')
     <div id="content">
         <div id="content-header">
-            <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">Tables</a> </div>
-            <h1>Tables <a href="{{route('admin.category.create')}}" class="btn btn-success btn-large" >thêm danh mục mới</a> </h1>
+            <div id="breadcrumb"> <a href="{{route('admin.dashboard')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> trang chủ</a> <a href="{{route('admin.category.index')}}" class="current">danh mục</a> </div>
+            <h1> <a href="{{route('admin.category.create')}}" class="btn btn-success btn-large" >thêm danh mục mới</a> </h1>
         </div>
         <div class="container-fluid">
             <hr>

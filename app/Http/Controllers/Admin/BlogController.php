@@ -23,7 +23,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::latest()->get();
+        $blogs = Blog::with('user')->latest()->get();
         return view('admin.pages.blogs.index',compact('blogs'));
     }
 
@@ -87,7 +87,8 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        $blog = Blog::find($id);
+        $blog = Blog::with('user')->find($id);
+        dd($blog->user);
         return view('admin.pages.blogs.show',compact('blog'));
     }
 

@@ -3,7 +3,7 @@ Route::group(['namespace' => 'Client'], function () {
     Route::get('','ClientController@index');
     Route::get('contact','ClientController@contact');
 
-   Route::get('login','LoginController@ShowLoginForm');
+//   Route::get('login','LoginController@ShowLoginForm');
 
    Route::get('listing',"ClientController@listing");
 
@@ -12,8 +12,8 @@ Route::group(['namespace' => 'Client'], function () {
        route::post('','RegisterController@signup');
    });
 
-   Route::group(['prefix' => 'blog'], function () {
-       Route::get('','BlogController@index');
+   Route::group(['prefix' => '/blog'], function () {
+       Route::get('','BlogController@index')->name('client.blog');
        Route::get('/{detail}','BlogController@detail');
    });
 });
