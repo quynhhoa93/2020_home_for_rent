@@ -14,8 +14,11 @@ Route::group(['namespace' => 'Client'], function () {
 
    Route::group(['prefix' => '/blog'], function () {
        Route::get('','BlogController@index')->name('client.blog');
-       Route::get('/{detail}','BlogController@detail');
+       Route::get('/{slug}','BlogController@detail');
+
+       Route::post('/blog-detail/{blog}','CommentController@commentBlog')->name('commentBlog');
    });
+
 });
 
 Auth::routes();

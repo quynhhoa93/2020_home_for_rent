@@ -29,6 +29,7 @@
                                 <tr>
                                     <th></th>
                                     <th>tên bài viết</th>
+                                    <th>tên bài viết</th>
                                     <th>chi tiết bài viết</th>
                                     <th>trạng thái</th>
                                     <th>phê duyệt</th>
@@ -43,6 +44,7 @@
                                     <tr>
                                         <td>{{++$key}}</td>
                                         <td>{{$blog->title}}</td>
+                                        <td>{{$blog->user->name}}</td>
                                         <td>{!! str_limit($blog->body,30) !!}</td>
                                         <td>
                                             @if($blog->status == 0)

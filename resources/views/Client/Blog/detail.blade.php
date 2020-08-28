@@ -61,52 +61,53 @@
 								</div>
 							</div>
 						</div>
+
+                        @if($blog->comments->count() > 0)
 						<div class="product_single_content mb30">
 							<div class="mbp_pagination_comments">
 								<div class="total_review">
-									<h4>896 Reviews</h4>
-									<ul class="review_star_list mb0 pl10">
-										<li class="list-inline-item"><i class="fa fa-star"></i></li>
-										<li class="list-inline-item"><i class="fa fa-star"></i></li>
-										<li class="list-inline-item"><i class="fa fa-star"></i></li>
-										<li class="list-inline-item"><i class="fa fa-star"></i></li>
-										<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-									</ul>
-									<a class="tr_outoff pl10" href="#">( 4.5 out of 5 )</a>
-								</div>
+									<h4>{{$blog->comments->count()}} bình luận</h4>
+                                </div>
+
+                                @foreach($blog->comments as $comment)
 								<div class="mbp_first media">
 									<img src="/assets/images/testimonial/1.png" class="mr-3" alt="1.png">
 									<div class="media-body">
-								    	<h4 class="sub_title mt-0">Diana Cooper
-											<span class="sspd_review">
-												<ul class="mb0 pl15">
-													<li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-													<li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-													<li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-													<li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-													<li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-													<li class="list-inline-item"></li>
-												</ul>
-											</span>
-								    	</h4>
+								    	<h4 class="sub_title mt-0">{{$comment->user->name}}</h4>
 								    	<a class="sspd_postdate fz14" href="#">December 28, 2020</a>
-								    	<p class="fz14 mt10">Beautiful home, very picturesque and close to everything in jtree! A little warm for a hot weekend, but would love to come back during the cooler seasons!</p>
+								    	<p class="fz14 mt10">{{$comment->com}}</p>
 									</div>
 								</div>
+                                @endforeach
 								<div class="custom_hr"></div>
 							</div>
 						</div>
+                        @else
+                            <div class="product_single_content mb30">
+                                <div class="mbp_pagination_comments">
+                                    <div class="total_review">
+                                        <h4>Chưa có bình luận nào</h4>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                        @guest
+                            <h4>Vui lòng đăng nhập để có thể bình luận</h4>
+                        @else
 						<div class="bsp_reveiw_wrt">
-							<h4>Write a Review</h4>
+							<h4>Bình luận</h4>
 
-							<form class="comments_form">
-
+							<form class="comments_form" action="{{route('commentBlog',$blog->id)}}" method="post">
+                                @csrf
 								<div class="form-group">
-								    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Your Review"></textarea>
+								    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="bình luận của bạn" name="com"></textarea>
 								</div>
-								<button type="submit" class="btn btn-thm">Submit Review</button>
+								<button type="submit" class="btn btn-thm">Đăng</button>
 							</form>
 						</div>
+                        @endguest
 					</div>
 					<div class="row">
 						<div class="col-lg-12 mb20">
@@ -133,7 +134,7 @@
 											<li class="list-inline-item"><a href="#"><img src="/assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">Ali Tufan</a></li>
 										</ul>
-										<a class="fp_pdate float-right text-thm" href="/blog/{{$randomBlog->id}}">Xem tiếp <span class="flaticon-next"></span></a>
+										<a class="fp_pdate float-right text-thm" href="/blog/{{$randomBlog->slug}}">Xem tiếp <span class="flaticon-next"></span></a>
 									</div>
 								</div>
 							</div>

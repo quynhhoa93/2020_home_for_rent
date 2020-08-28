@@ -37,7 +37,7 @@
 											</a></li>
 										<li class="list-inline-item"><a href="#"><span class="flaticon-calendar pr10"></span> {{ $item->created_at }}</a></li>
 									</ul>
-									<a class="fp_pdate float-right text-thm" href="/blog/{{$item->id}}">Xem tiếp <span class="flaticon-next"></span></a>
+									<a class="fp_pdate float-right text-thm" href="/blog/{{$item->slug}}">Xem tiếp <span class="flaticon-next"></span></a>
 								</div>
 							</div>
 						</div>
